@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism WPF Honeys", "Prism WPF Honeys\Prism WPF Honeys.csproj", "{200081DE-9272-4CE1-B7E3-AF8D9A160896}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E2B3BFDB-FE6A-4E67-8A4E-D20B1FD97DE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Modules.Mail", "Modules\PrismWPFHoneys.Modules.Mail\PrismWPFHoneys.Modules.Mail.csproj", "{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Modules.Contacts", "Modules\PrismWPFHoneys.Modules.Contacts\PrismWPFHoneys.Modules.Contacts.csproj", "{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Modules.Calendar", "Modules\PrismWPFHoneys.Modules.Calendar\PrismWPFHoneys.Modules.Calendar.csproj", "{3A5D216D-2F53-4584-85DA-FA8A4B156003}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +23,26 @@ Global
 		{200081DE-9272-4CE1-B7E3-AF8D9A160896}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{200081DE-9272-4CE1-B7E3-AF8D9A160896}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{200081DE-9272-4CE1-B7E3-AF8D9A160896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A5D216D-2F53-4584-85DA-FA8A4B156003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5D216D-2F53-4584-85DA-FA8A4B156003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5D216D-2F53-4584-85DA-FA8A4B156003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5D216D-2F53-4584-85DA-FA8A4B156003}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668} = {E2B3BFDB-FE6A-4E67-8A4E-D20B1FD97DE1}
+		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D} = {E2B3BFDB-FE6A-4E67-8A4E-D20B1FD97DE1}
+		{3A5D216D-2F53-4584-85DA-FA8A4B156003} = {E2B3BFDB-FE6A-4E67-8A4E-D20B1FD97DE1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D74968DC-0A88-45AA-966B-01F4FD4BB9EA}
