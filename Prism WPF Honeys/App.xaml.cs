@@ -5,6 +5,8 @@ using System.Windows;
 using PrismWPFHoneys.Modules.Calendar;
 using PrismWPFHoneys.Modules.Contacts;
 using PrismWPFHoneys.Modules.Mail;
+using System.Windows.Controls;
+using Prism.Regions;
 
 namespace Prism_WPF_Honeys
 {
@@ -28,6 +30,12 @@ namespace Prism_WPF_Honeys
             moduleCatalog.AddModule<CalendarModule>();
             moduleCatalog.AddModule<ContactsModule>();
             moduleCatalog.AddModule<MailModule>();
+        }
+
+        protected override void ConfigureRegionAdapterMappings(RegionAdapterMappings regionAdapterMappings)
+        {
+            base.ConfigureRegionAdapterMappings(regionAdapterMappings);
+            regionAdapterMappings.RegisterMapping(typeof(StackPanel), Container.Resolve<StackPanelRegionAdapter>());
         }
     }
 }

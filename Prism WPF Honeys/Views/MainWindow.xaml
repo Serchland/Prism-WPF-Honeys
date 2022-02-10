@@ -6,6 +6,15 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}">
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="{x:Static core:RegionNames.ContentRegion}" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <ContentControl Grid.Row="0"
+            prism:RegionManager.RegionName="{x:Static core:RegionNames.ContentRegion}" />
+        
+        <StackPanel Grid.Row="1"
+                        prism:RegionManager.RegionName="{x:Static core:RegionNames.StackRegion}" />
     </Grid>
 </Window>
