@@ -96,5 +96,23 @@
   <ItemGroup>
     <PackageReference Include="Prism.Unity" Version="8.0.0.1909" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.Calendar\PrismWPFHoneys.Modules.Calendar.csproj">
+      <Project>{3a5d216d-2f53-4584-85da-fa8a4b156003}</Project>
+      <Name>PrismWPFHoneys.Modules.Calendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.Contacts\PrismWPFHoneys.Modules.Contacts.csproj">
+      <Project>{b2cca589-f26c-49bd-b2d5-5d82d7d6011d}</Project>
+      <Name>PrismWPFHoneys.Modules.Contacts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.Mail\PrismWPFHoneys.Modules.Mail.csproj">
+      <Project>{cc4f4a1e-4632-4779-a88a-8bf5a0ff4668}</Project>
+      <Name>PrismWPFHoneys.Modules.Mail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrismWPFHoneys.Core\PrismWPFHoneys.Core.csproj">
+      <Project>{1faa642d-cda1-4ac7-92c0-6ad7ccdc6f1a}</Project>
+      <Name>PrismWPFHoneys.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
