@@ -17,8 +17,7 @@ namespace PrismWPFHoneys.Modules.Mail
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            _regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, typeof(ViewA));
-            _regionManager.RegisterViewWithRegion(RegionNames.StackRegion, typeof(ViewB));
+           
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

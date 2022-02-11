@@ -7,6 +7,7 @@ using PrismWPFHoneys.Modules.Contacts;
 using PrismWPFHoneys.Modules.Mail;
 using System.Windows.Controls;
 using Prism.Regions;
+using PrismWPFHoneys.Prism.CustomRegion;
 
 namespace Prism_WPF_Honeys
 {
