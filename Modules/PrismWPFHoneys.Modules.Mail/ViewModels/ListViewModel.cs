@@ -1,14 +1,13 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrismWPFHoneys.Modules.Calendar.ViewModels
+namespace PrismWPFHoneys.Modules.Mail.ViewModels
 {
-    public class ViewAViewModel : BindableBase
+    public class ListViewModel : BindableBase
     {
         private string _message;
         public string Message
@@ -17,9 +16,9 @@ namespace PrismWPFHoneys.Modules.Calendar.ViewModels
             set { SetProperty(ref _message, value); }
         }
 
-        public ViewAViewModel()
+        public ListViewModel()
         {
-            Message = "View A from your Prism Module";
+            Message = "List from mail module";
         }
     }
 }

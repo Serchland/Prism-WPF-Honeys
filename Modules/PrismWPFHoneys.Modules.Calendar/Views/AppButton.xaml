@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="PrismWPFHoneys.Modules.Calendar.Views.AppButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:core="clr-namespace:PrismWPFHoneys.Core.Views;assembly=PrismWPFHoneys.Core">
+    <Grid>
+        <core:ButtonView></core:ButtonView>
+    </Grid>
+</UserControl>
