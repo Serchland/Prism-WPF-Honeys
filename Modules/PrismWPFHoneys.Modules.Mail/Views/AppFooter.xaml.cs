@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace PrismWPFHoneys.Modules.Mail.Views
 {
     /// <summary>
-    /// Lógica de interacción para ViewB.xaml
+    /// Lógica de interacción para AppFooter.xaml
     /// </summary>
-    public partial class ViewB : UserControl
+    public partial class AppFooter : UserControl
     {
-        public ViewB()
+        public AppFooter()
         {
             InitializeComponent();
         }

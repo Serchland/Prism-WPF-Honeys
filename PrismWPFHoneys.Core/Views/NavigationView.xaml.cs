@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PrismWPFHoneys.Modules.Calendar.Views
+namespace PrismWPFHoneys.Core.Views
 {
     /// <summary>
-    /// Interaction logic for ViewA.xaml
+    /// Lógica de interacción para Navigation.xaml
     /// </summary>
-    public partial class ViewA : UserControl
+    public partial class NavigationView : TreeView
     {
-        public ViewA()
+        public NavigationView()
         {
             InitializeComponent();
         }
