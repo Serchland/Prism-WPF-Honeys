@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PrismWPFHoneys.Modules.Contacts.Views
+namespace PrismWPFHoneys.Core.Views
 {
     /// <summary>
-    /// Interaction logic for ViewA.xaml
+    /// Lógica de interacción para ListView.xaml
     /// </summary>
-    public partial class ViewA : UserControl
+    public partial class ListView : UserControl
     {
-        public ViewA()
+        public ListView()
         {
             InitializeComponent();
         }

@@ -1,20 +1,66 @@
-﻿<Window x:Class="Prism_WPF_Honeys.Views.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:prism="http://prismlibrary.com/"
-        xmlns:core="clr-namespace:PrismWPFHoneys.Core;assembly=PrismWPFHoneys.Core"
-        prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="{Binding Title}">
+﻿<ribbon:RibbonWindow x:Class="Prism_WPF_Honeys.Views.MainWindow"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
+                     xmlns:prism="http://prismlibrary.com/"
+                     xmlns:core="clr-namespace:PrismWPFHoneys.Core;assembly=PrismWPFHoneys.Core"
+                     prism:ViewModelLocator.AutoWireViewModel="True"
+                     Title="{Binding Title}">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        
-        <ContentControl Grid.Row="0"
-            prism:RegionManager.RegionName="{x:Static core:RegionNames.ContentRegion}" />
-        
-        <StackPanel Grid.Row="1"
-                        prism:RegionManager.RegionName="{x:Static core:RegionNames.StackRegion}" />
+
+        <!--RibbonContent-->
+        <ContentControl Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="0">
+            <Ribbon Name="RibbonControl">
+                <!--<ribbon:RibbonApplicationMenu>
+                    <ribbon:RibbonApplicationMenuItem Header="Hello_Ribbon" />
+                </ribbon:RibbonApplicationMenu>-->
+                <ribbon:RibbonTab>
+                    Ribbon content goes here
+                </ribbon:RibbonTab>
+            </Ribbon>
+        </ContentControl>
+
+        <!--NavigationContent-->
+        <Grid Grid.Column="0"
+              Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ContentControl Grid.Row="0"
+                            prism:RegionManager.RegionName="{x:Static core:RegionNames.NavigationContentRegion}">
+            </ContentControl>
+
+            <!--ButtonContent-->
+            <StackPanel Grid.Row="1"
+                        prism:RegionManager.RegionName="{x:Static core:RegionNames.ButtonContentRegion}">
+
+            </StackPanel>
+        </Grid>
+
+        <!--MainContent-->
+        <ContentControl Grid.Column="1"
+                        Grid.Row="1"
+                        prism:RegionManager.RegionName="{x:Static core:RegionNames.MainContentRegion}">
+        </ContentControl>
+
+        <!--FooterContent-->
+        <ContentControl Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="2"
+                        prism:RegionManager.RegionName="{x:Static core:RegionNames.FooterContentRegion}">
+        </ContentControl>
     </Grid>
-</Window>
+</ribbon:RibbonWindow>
