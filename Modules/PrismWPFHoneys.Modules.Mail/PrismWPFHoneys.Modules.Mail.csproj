@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -67,6 +68,7 @@
     <Compile Include="ViewModels\FooterViewModel.cs" />
     <Compile Include="ViewModels\ListViewModel.cs" />
     <Compile Include="ViewModels\NavigationViewModel.cs" />
+    <Compile Include="ViewModels\RibbonTabViewModel.cs" />
     <Compile Include="Views\AppButton.xaml.cs">
       <DependentUpon>AppButton.xaml</DependentUpon>
     </Compile>
@@ -78,6 +80,9 @@
     </Compile>
     <Compile Include="Views\AppNavigation.xaml.cs">
       <DependentUpon>AppNavigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppRibbonTab.xaml.cs">
+      <DependentUpon>AppRibbonTab.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,11 +111,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\AppRibbonTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\PrismWPFHoneys.Business\PrismWPFHoneys.Business.csproj">
+      <Project>{BD351459-E390-4962-BCE0-50EAE6C28816}</Project>
+      <Name>PrismWPFHoneys.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\PrismWPFHoneys.Core\PrismWPFHoneys.Core.csproj">
       <Project>{f89a1943-10dc-4395-a255-380486ffbe09}</Project>
       <Name>PrismWPFHoneys.Core</Name>

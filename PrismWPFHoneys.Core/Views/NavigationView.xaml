@@ -1,6 +1,15 @@
 ﻿<TreeView x:Class="PrismWPFHoneys.Core.Views.NavigationView"
           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-          ItemsSource="{Binding Items}">
+          xmlns:core="clr-namespace:PrismWPFHoneys.Core.Types.Types"
+          ItemsSource="{Binding Items}"
+          Loaded="TreeView_Loaded">
 
+    <TreeView.ItemTemplate>
+        <HierarchicalDataTemplate DataType="{x:Type core:NavigationItem}"
+                                  ItemsSource="{Binding Items}">
+
+            <TextBlock Text="{Binding Caption}"></TextBlock>
+        </HierarchicalDataTemplate>
+    </TreeView.ItemTemplate>
 </TreeView>

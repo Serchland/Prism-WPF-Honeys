@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PrismWPFHoneys.Core.Views
 {
@@ -23,6 +11,13 @@ namespace PrismWPFHoneys.Core.Views
         public NavigationView()
         {
             InitializeComponent();
+        }
+
+        private void TreeView_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.Loaded -= TreeView_Loaded;
+            var treeViewItem = ItemContainerGenerator.ContainerFromItem(this.Items[0]) as TreeViewItem;
+            treeViewItem.IsExpanded = true;
         }
     }
 }

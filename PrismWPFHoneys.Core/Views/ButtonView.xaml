@@ -1,5 +1,7 @@
 ﻿<Button x:Class="PrismWPFHoneys.Core.Views.ButtonView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Content="{Binding Caption}">
+        Content="{Binding Caption}"
+        Command="{Binding SelectedCommand}"
+        CommandParameter="{Binding ModuleName}">
 </Button>
