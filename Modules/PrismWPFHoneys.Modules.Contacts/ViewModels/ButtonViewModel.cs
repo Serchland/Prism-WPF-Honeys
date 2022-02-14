@@ -1,24 +1,24 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Regions;
+using PrismWPFHoneys.Core.Types.Base;
+using PrismWPFHoneys.Core.Types.Interfaces;
+using PrismWPFHoneys.Core.Types.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 {
-    public class ButtonViewModel : BindableBase
+    public class ButtonViewModel : ButtonViewModelBase
     {
-        private string _caption;
-        public string Caption
+        public ButtonViewModel(IRegionManager regionManager, IApplicationCommands applicationCommands) : base(regionManager, applicationCommands)
         {
-            get { return _caption; }
-            set { SetProperty(ref _caption, value); }
+            Initialize();
         }
 
-        public ButtonViewModel()
+        public string Caption { get; set; }
+
+        private void Initialize()
         {
-            Caption = "Mail Button";
+            Caption = "Contacts Button";
+            ModuleName = AppModuleNames.ContactsModuleName;
         }
     }
 }

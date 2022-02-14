@@ -1,0 +1,8 @@
+﻿<ribbon:RibbonTab x:Class="PrismWPFHoneys.Modules.Contacts.Views.AppRibbonTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
+             Header="Actions">
+
+    Contacts Ribbon content goes here.
+</ribbon:RibbonTab>

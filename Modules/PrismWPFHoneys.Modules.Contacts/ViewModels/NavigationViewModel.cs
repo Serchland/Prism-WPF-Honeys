@@ -1,14 +1,31 @@
 ﻿using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PrismWPFHoneys.Core.Types.Types;
+using System.Collections.ObjectModel;
 
 namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 {
     public class NavigationViewModel : BindableBase
     {
-        //Blank for now.
+        public NavigationViewModel()
+        {
+            GenerateMenu();
+        }
+
+        public ObservableCollection<NavigationItem> Items { get; set; }
+
+        private void GenerateMenu()
+        {
+            Items = new ObservableCollection<NavigationItem>();
+
+            NavigationItem root = new NavigationItem();
+            root.Caption = "Root Contacts";
+            root.NavigationPath = "DefaultNavigationPath";
+
+            root.Items.Add(new NavigationItem() { Caption = "Inbox", NavigationPath = "Inbox" });
+            root.Items.Add(new NavigationItem() { Caption = "Outbox", NavigationPath = "Outbox" });
+            root.Items.Add(new NavigationItem() { Caption = "Draft", NavigationPath = "Draft" });
+
+            Items.Add(root);
+        }
     }
 }

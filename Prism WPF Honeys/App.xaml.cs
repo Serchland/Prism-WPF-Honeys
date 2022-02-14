@@ -1,13 +1,15 @@
-﻿using Prism_WPF_Honeys.Views;
-using Prism.Ioc;
+﻿using Prism.Ioc;
 using Prism.Modularity;
-using System.Windows;
+using Prism.Regions;
+using Prism_WPF_Honeys.Views;
+using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Modules.Calendar;
 using PrismWPFHoneys.Modules.Contacts;
 using PrismWPFHoneys.Modules.Mail;
-using System.Windows.Controls;
-using Prism.Regions;
 using PrismWPFHoneys.Prism.CustomRegion;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Ribbon;
 
 namespace Prism_WPF_Honeys
 {
@@ -23,7 +25,7 @@ namespace Prism_WPF_Honeys
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
@@ -37,6 +39,7 @@ namespace Prism_WPF_Honeys
         {
             base.ConfigureRegionAdapterMappings(regionAdapterMappings);
             regionAdapterMappings.RegisterMapping(typeof(StackPanel), Container.Resolve<StackPanelRegionAdapter>());
+            regionAdapterMappings.RegisterMapping(typeof(Ribbon), Container.Resolve<RibbonRegionAdapter>());
         }
     }
 }
