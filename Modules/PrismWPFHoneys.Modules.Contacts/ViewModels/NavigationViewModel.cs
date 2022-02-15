@@ -1,12 +1,15 @@
 ﻿using Prism.Mvvm;
+using Prism.Regions;
+using PrismWPFHoneys.Core.Types.Base;
+using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Types;
 using System.Collections.ObjectModel;
 
 namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 {
-    public class NavigationViewModel : BindableBase
+    public class NavigationViewModel : NavigationViewModelBase 
     {
-        public NavigationViewModel()
+        public NavigationViewModel(IRegionManager regionManager) : base(regionManager)
         {
             GenerateMenu();
         }
@@ -27,5 +30,10 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 
             Items.Add(root);
         }
+
+        //string GetNavigationPath(string folder)
+        //{
+        //    //return $"MailList?{FolderParameters.FolderKey}={folder}";
+        //}
     }
 }

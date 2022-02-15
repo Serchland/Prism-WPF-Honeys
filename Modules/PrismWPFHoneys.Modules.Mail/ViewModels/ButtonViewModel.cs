@@ -7,7 +7,7 @@ namespace PrismWPFHoneys.Modules.Mail.ViewModels
 {
     public class ButtonViewModel : ButtonViewModelBase
     { 
-        public ButtonViewModel(IRegionManager regionManager, IApplicationCommands applicationCommands) : base(regionManager, applicationCommands)
+        public ButtonViewModel(IRegionManager regionManager) : base(regionManager)
         {
             Initialize();
         }

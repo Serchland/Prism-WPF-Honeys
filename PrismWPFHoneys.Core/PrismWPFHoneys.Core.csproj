@@ -33,13 +33,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
-    <Reference Include="Prism, Version=8.0.0.1909, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Core.8.0.0.1909\lib\net47\Prism.dll</HintPath>
+    <Reference Include="Prism, Version=8.1.97.5141, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.8.1.97\lib\net47\Prism.dll</HintPath>
     </Reference>
-    <Reference Include="Prism.Wpf, Version=8.0.0.1909, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Wpf.8.0.0.1909\lib\net47\Prism.Wpf.dll</HintPath>
+    <Reference Include="Prism.Wpf, Version=8.1.97.5141, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.8.1.97\lib\net47\Prism.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -58,7 +58,11 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Types\Base\NavigationViewModelBase.cs" />
+    <Compile Include="Types\CustomAttribute\DependentViewAttribute.cs" />
     <Compile Include="Types\Base\ButtonViewModelBase.cs" />
+    <Compile Include="Types\Interfaces\INavigationPath.cs" />
+    <Compile Include="Types\Interfaces\ISupportDataContext.cs" />
     <Compile Include="Types\Interfaces\IApplicationCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -73,6 +77,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Types\Prism\KeyNames.cs" />
     <Compile Include="Types\Prism\RegionNames.cs" />
     <Compile Include="Types\Prism\RegisterForNavigation.cs" />
     <Compile Include="Types\Types\AppModuleNames.cs" />
@@ -80,6 +85,7 @@
     <Compile Include="Views\ButtonView.xaml.cs">
       <DependentUpon>ButtonView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Converters\SelectedItemToNavigationPathConverter.cs" />
     <Compile Include="Views\FooterView.xaml.cs">
       <DependentUpon>FooterView.xaml</DependentUpon>
     </Compile>
@@ -123,5 +129,6 @@
       <Name>PrismWPFHoneys.Business</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

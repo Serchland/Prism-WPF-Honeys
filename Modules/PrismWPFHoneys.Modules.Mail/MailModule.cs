@@ -21,9 +21,8 @@ namespace PrismWPFHoneys.Modules.Mail
         {
             _regionManager.RegisterViewWithRegion(RegionNames.ButtonContentRegion, typeof(AppButton));
             _regionManager.RegisterViewWithRegion(RegionNames.FooterContentRegion, typeof(AppFooter));
-            _regionManager.RegisterViewWithRegion(RegionNames.ListContentRegion, typeof(AppList));
+            //_regionManager.RegisterViewWithRegion(RegionNames.ListContentRegion, typeof(AppList));
             _regionManager.RegisterViewWithRegion(RegionNames.NavigationContentRegion, typeof(AppNavigation));
-            //_regionManager.RegisterViewWithRegion(RegionNames.RibbonContentRegion, typeof(AppRibbonTab));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
