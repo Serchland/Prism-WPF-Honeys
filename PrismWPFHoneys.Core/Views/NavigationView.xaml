@@ -2,9 +2,23 @@
           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
           xmlns:core="clr-namespace:PrismWPFHoneys.Core.Types.Types"
+          xmlns:converters="clr-namespace:PrismWPFHoneys.Core.Views.Converters"
+          xmlns:behaviours="http://schemas.microsoft.com/xaml/behaviors"
           ItemsSource="{Binding Items}"
+          Name="NavigationTree"
           Loaded="TreeView_Loaded">
 
+    <TreeView.Resources>
+        <converters:SelectedItemToNavigationPathConverter x:Key="SelectedItemToNavigationPathConverter"></converters:SelectedItemToNavigationPathConverter>
+    </TreeView.Resources>
+
+    <behaviours:Interaction.Triggers>
+    <behaviours:EventTrigger EventName="SelectedItemChanged">
+        <behaviours:InvokeCommandAction Command="{Binding NavigationCommand}"
+                                            CommandParameter="{Binding ElementName=NavigationTree, Path=SelectedItem, Converter={StaticResource SelectedItemToNavigationPathConverter}}"></behaviours:InvokeCommandAction>
+    </behaviours:EventTrigger>
+    </behaviours:Interaction.Triggers>
+    
     <TreeView.ItemTemplate>
         <HierarchicalDataTemplate DataType="{x:Type core:NavigationItem}"
                                   ItemsSource="{Binding Items}">

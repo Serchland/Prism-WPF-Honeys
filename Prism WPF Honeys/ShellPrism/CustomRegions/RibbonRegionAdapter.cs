@@ -1,19 +1,19 @@
 ﻿using Prism.Regions;
 using System.Collections.Specialized;
 using System.Windows;
-using System.Windows.Controls;
+using System.Windows.Controls.Ribbon;
 
-namespace PrismWPFHoneys.Prism.CustomRegion
+namespace PrismWPFHoneys.ShellPrism.CustomRegion
 {
-    public class StackPanelRegionAdapter : RegionAdapterBase<StackPanel>
+    public class RibbonRegionAdapter : RegionAdapterBase<Ribbon>
     {
-
-        public StackPanelRegionAdapter(IRegionBehaviorFactory factory)
-            : base(factory)
+        public RibbonRegionAdapter(IRegionBehaviorFactory regionBehaviorFactory) 
+            : base(regionBehaviorFactory)
         {
+
         }
 
-        protected override void Adapt(IRegion region, StackPanel regionTarget)
+        protected override void Adapt(IRegion region, Ribbon regionTarget)
         {
             region.Views.CollectionChanged += (s, e) =>
             {
@@ -21,15 +21,15 @@ namespace PrismWPFHoneys.Prism.CustomRegion
                 {
                     foreach (FrameworkElement element in e.NewItems)
                     {
-                        regionTarget.Children.Add(element);
+                        regionTarget.Items.Add(element);
                     }
                 }
 
                 if (e.Action == NotifyCollectionChangedAction.Remove)
                 {
-                    foreach (FrameworkElement element in e.NewItems)
+                    foreach (FrameworkElement element in e.OldItems)
                     {
-                        regionTarget.Children.Remove(element);
+                        regionTarget.Items.Remove(element);
                     }
                 }
             };

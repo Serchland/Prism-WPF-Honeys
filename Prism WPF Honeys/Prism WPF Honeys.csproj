@@ -65,8 +65,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Prism\CustomRegions\RibbonRegionAdapter.cs" />
-    <Compile Include="Prism\CustomRegions\StackPanelRegionAdapter.cs" />
+    <Compile Include="ShellPrism\CustomRegions\DependentViewRegionBehaviour.cs" />
+    <Compile Include="ShellPrism\CustomRegions\DependentViewInfo.cs" />
+    <Compile Include="ShellPrism\CustomRegions\RibbonRegionAdapter.cs" />
+    <Compile Include="ShellPrism\CustomRegions\StackPanelRegionAdapter.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -97,7 +99,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Prism.Unity" Version="8.0.0.1909" />
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.Calendar\PrismWPFHoneys.Modules.Calendar.csproj">

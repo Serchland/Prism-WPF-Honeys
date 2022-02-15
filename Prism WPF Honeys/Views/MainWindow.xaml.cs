@@ -1,6 +1,8 @@
 ﻿using Prism.Commands;
 using Prism.Regions;
 using PrismWPFHoneys.Core;
+using PrismWPFHoneys.Core.Types.Prism;
+using PrismWPFHoneys.Core.Types.Types;
 using System;
 using System.Windows.Controls.Ribbon;
 

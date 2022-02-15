@@ -11,9 +11,9 @@ namespace PrismWPFHoneys.Core.Types.Base
     public class ButtonViewModelBase : BindableBase
     {
         private IRegionManager _regionManager;
-        public ButtonViewModelBase(IRegionManager regionManager, IApplicationCommands applicationCommands)
+        public ButtonViewModelBase(IRegionManager regionManager)
         {
-            applicationCommands.NavigateCommand.RegisterCommand(SelectedCommand);
+            //applicationCommands.SelectedApplicationCommand.RegisterCommand(SelectedCommand);
             _regionManager = regionManager;
         }
 
@@ -32,7 +32,7 @@ namespace PrismWPFHoneys.Core.Types.Base
             {
                 case AppModuleNames.CalendarModuleName:
                     _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.CalendarFooterContentRegion);
-                    _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.CalendarListContentRegion);
+                    //_regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.CalendarListContentRegion);
                     _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.CalendarNavigationContentRegion);
                     _regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.CalendarRibbonContentRegion);               
                      
@@ -40,7 +40,7 @@ namespace PrismWPFHoneys.Core.Types.Base
 
                 case AppModuleNames.ContactsModuleName:
                     _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.ContactsFooterContentRegion);
-                    _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.ContactsListContentRegion);
+                    //_regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.ContactsListContentRegion);
                     _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.ContactsNavigationContentRegion);
                     _regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.ContactsRibbonContentRegion);
 
@@ -48,7 +48,7 @@ namespace PrismWPFHoneys.Core.Types.Base
 
                 case AppModuleNames.MailModuleName:
                     _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.MailFooterContentRegion);
-                    _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.MailListContentRegion);
+                    //_regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.MailListContentRegion);
                     _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.MailNavigationContentRegion);
                     _regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.MailRibbonContentRegion);
 

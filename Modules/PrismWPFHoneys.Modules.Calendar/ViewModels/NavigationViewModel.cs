@@ -1,12 +1,15 @@
 ﻿using Prism.Mvvm;
+using Prism.Regions;
+using PrismWPFHoneys.Core.Types.Base;
+using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Types;
 using System.Collections.ObjectModel;
 
 namespace PrismWPFHoneys.Modules.Calendar.ViewModels
 {
-    public class NavigationViewModel : BindableBase
+    public class NavigationViewModel : NavigationViewModelBase 
     {
-        public NavigationViewModel()
+        public NavigationViewModel(IRegionManager regionManager) : base (regionManager)
         {
             GenerateMenu();
         }
