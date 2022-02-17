@@ -4,14 +4,14 @@ namespace PrismWPFHoneys.Core.Types.Interfaces
 {
     public interface IApplicationCommands
     {
-        //CompositeCommand SelectedApplicationCommand { get; }
-        CompositeCommand NavigationCommand { get; }
+        CompositeCommand SelectedApplicationCommand { get; }
+        CompositeCommand NavigationNavigateCommand { get; }
     }
 
     public class ApplicationCommands : IApplicationCommands
     {
-        //public CompositeCommand SelectedApplicationCommand { get; } = new CompositeCommand();
-        public CompositeCommand NavigationCommand { get; } = new CompositeCommand();
+        public CompositeCommand SelectedApplicationCommand { get; } = new CompositeCommand();
+        public CompositeCommand NavigationNavigateCommand { get; } = new CompositeCommand();
 
     }
 }

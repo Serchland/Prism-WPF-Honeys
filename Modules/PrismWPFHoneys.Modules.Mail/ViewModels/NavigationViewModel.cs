@@ -1,5 +1,6 @@
 ﻿using Prism.Regions;
 using PrismWPFHoneys.Core.Types.Base;
+using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Prism;
 using PrismWPFHoneys.Core.Types.Types;
 using System.Collections.ObjectModel;
@@ -8,7 +9,7 @@ namespace PrismWPFHoneys.Modules.Mail.ViewModels
 {
     public class NavigationViewModel : NavigationViewModelBase
     {
-        public NavigationViewModel(IRegionManager regionManager) : base(regionManager)
+        public NavigationViewModel(IApplicationCommands applicationCommands) : base(applicationCommands)
         {
             GenerateMenu();
         }
@@ -30,9 +31,9 @@ namespace PrismWPFHoneys.Modules.Mail.ViewModels
             Items.Add(root);
         }
 
-        private string GetNavigationPath(string item)
+        protected override string GetNavigationPath(string item)
         {
             return string.Format("{0}{1}{2}", RegisterForNavigation.MailListContentRegion, "?id=", item);
-        }
+        }    
     }
 }

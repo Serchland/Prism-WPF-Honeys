@@ -14,7 +14,7 @@
 
     <behaviours:Interaction.Triggers>
     <behaviours:EventTrigger EventName="SelectedItemChanged">
-        <behaviours:InvokeCommandAction Command="{Binding NavigationCommand}"
+            <behaviours:InvokeCommandAction Command="{Binding NavigationNavigateCommand}"
                                             CommandParameter="{Binding ElementName=NavigationTree, Path=SelectedItem, Converter={StaticResource SelectedItemToNavigationPathConverter}}"></behaviours:InvokeCommandAction>
     </behaviours:EventTrigger>
     </behaviours:Interaction.Triggers>
