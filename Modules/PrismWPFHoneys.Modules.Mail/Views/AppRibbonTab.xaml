@@ -3,6 +3,6 @@
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                   xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
                   Header="Actions">
-    
+
     Mail Ribbon content goes here.
 </ribbon:RibbonTab>

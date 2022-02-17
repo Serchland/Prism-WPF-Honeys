@@ -1,32 +1,36 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
+using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Prism;
+using System;
 
 namespace PrismWPFHoneys.Core.Types.Base
 {
-    public class NavigationViewModelBase :BindableBase
+    public abstract class NavigationViewModelBase :BindableBase
     {
-        private IRegionManager _regionManager;
-       
-        public NavigationViewModelBase(IRegionManager regionManager)
+        private IApplicationCommands _applicationCommands;
+        
+        public NavigationViewModelBase(IApplicationCommands applicationCommands)
         {
-            _regionManager = regionManager;
-            NavigationCommand.Execute(null);
+            _applicationCommands = applicationCommands;
+            _applicationCommands.NavigationNavigateCommand.Execute(GetNavigationPath("Default"));
         }
 
-        public string DefaultNavigationPath { get => RegisterForNavigation.MailListContentRegion; }
+        protected abstract string GetNavigationPath(string item);
 
-        private DelegateCommand<string> _navigationCommand;
-        public DelegateCommand<string> NavigationCommand =>
-            _navigationCommand ?? (_navigationCommand = new DelegateCommand<string>(ExecuteNavigateCommand));
+        #region "Commands"
+        private DelegateCommand<string> _navigationNavigateCommand;
+        public DelegateCommand<string> NavigationNavigateCommand =>
+            _navigationNavigateCommand ?? (_navigationNavigateCommand = new DelegateCommand<string>(ExecuteNavigateCommand));
 
         private void ExecuteNavigateCommand(string navigationPath)
         {
             if (string.IsNullOrEmpty(navigationPath))
-                navigationPath = DefaultNavigationPath;
+                throw new ArgumentNullException();
 
-            _regionManager.RequestNavigate(RegionNames.ListContentRegion, navigationPath);
+            _applicationCommands.NavigationNavigateCommand.Execute(navigationPath);
         }
+        #endregion
     }
 }

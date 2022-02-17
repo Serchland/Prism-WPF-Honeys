@@ -8,7 +8,7 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 {
     public class ButtonViewModel : ButtonViewModelBase
     {
-        public ButtonViewModel(IRegionManager regionManager) : base(regionManager)
+        public ButtonViewModel(IApplicationCommands applicationCommands) : base(applicationCommands)
         {
             Initialize();
         }

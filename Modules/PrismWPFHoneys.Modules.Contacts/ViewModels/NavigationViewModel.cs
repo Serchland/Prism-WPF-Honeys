@@ -1,7 +1,6 @@
-﻿using Prism.Mvvm;
-using Prism.Regions;
-using PrismWPFHoneys.Core.Types.Base;
+﻿using PrismWPFHoneys.Core.Types.Base;
 using PrismWPFHoneys.Core.Types.Interfaces;
+using PrismWPFHoneys.Core.Types.Prism;
 using PrismWPFHoneys.Core.Types.Types;
 using System.Collections.ObjectModel;
 
@@ -9,7 +8,7 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 {
     public class NavigationViewModel : NavigationViewModelBase 
     {
-        public NavigationViewModel(IRegionManager regionManager) : base(regionManager)
+        public NavigationViewModel(IApplicationCommands applicationCommands) : base(applicationCommands)
         {
             GenerateMenu();
         }
@@ -22,18 +21,18 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 
             NavigationItem root = new NavigationItem();
             root.Caption = "Root Contacts";
-            root.NavigationPath = "DefaultNavigationPath";
+            root.NavigationPath = GetNavigationPath("Default");
 
-            root.Items.Add(new NavigationItem() { Caption = "Inbox", NavigationPath = "Inbox" });
-            root.Items.Add(new NavigationItem() { Caption = "Outbox", NavigationPath = "Outbox" });
-            root.Items.Add(new NavigationItem() { Caption = "Draft", NavigationPath = "Draft" });
+            root.Items.Add(new NavigationItem() { Caption = "Active contacts", NavigationPath = GetNavigationPath("Active") });
+            root.Items.Add(new NavigationItem() { Caption = "Inactive contacts", NavigationPath = GetNavigationPath("Inactive") });
+            root.Items.Add(new NavigationItem() { Caption = "Deleted", NavigationPath = GetNavigationPath("Deleted") });
 
             Items.Add(root);
         }
 
-        //string GetNavigationPath(string folder)
-        //{
-        //    //return $"MailList?{FolderParameters.FolderKey}={folder}";
-        //}
+        protected override string GetNavigationPath(string item)
+        {
+            return string.Format("{0}{1}{2}", RegisterForNavigation.ContactsListContentRegion, "?id=", item);
+        }
     }
 }
