@@ -9,6 +9,7 @@ Steps definition:
 5. Step 5: Shell configured and controls added. Try to navigate yourself!
 6. Step 6: Navigation and creation of the navigation tree... But Houston we have a problem can you solve it? :-)
 7. Step 7: Fixed navigation problems with ribbonTabs and connection of the navigation tree with the list in the mail project. Do you want to implement it in Calendars and Contacts?
+8. Step 8: Connected the navigation tree of all modules with the list.
 
 This repository is under construction, please check it from time to time for the latest updates.
 
