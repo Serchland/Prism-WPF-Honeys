@@ -47,7 +47,7 @@ namespace Prism_WPF_Honeys
         protected override void ConfigureDefaultRegionBehaviors(IRegionBehaviorFactory regionBehaviors)
         {
             base.ConfigureDefaultRegionBehaviors(regionBehaviors);
-            regionBehaviors.AddIfMissing(KeyNames.DependentViewRegionBehaviourKey, typeof(DependentViewRegionBehaviour));
+            regionBehaviors.AddIfMissing(DependentViewRegionBehaviour.BehaviourKey, typeof(DependentViewRegionBehaviour));
         }
     }
 }

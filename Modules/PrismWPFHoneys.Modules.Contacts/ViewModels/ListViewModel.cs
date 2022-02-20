@@ -1,6 +1,6 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Commands;
+using Prism.Mvvm;
 using Prism.Regions;
-using PrismWPFHoneys.Core.Types.Prism;
 using PrismWPFHoneys.Core.Types.Types;
 
 namespace PrismWPFHoneys.Modules.Contacts.ViewModels
@@ -9,11 +9,24 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
     {
         private string _lastSelectedNavigationItem;
         public string Message { get; set; }
+        public string TestProperty { get; }
 
         public ListViewModel()
         {
             Message = "List from contacts module";
+            TestProperty = "Contacts TestProperty";
         }
+
+        #region "Commands"
+        private DelegateCommand _testCommand;
+        public DelegateCommand TestCommand =>
+            _testCommand ?? (_testCommand = new DelegateCommand(ExecuteCommandName));
+
+        void ExecuteCommandName()
+        {
+            System.Windows.MessageBox.Show("Command from Contacts");
+        }
+        #endregion
 
         #region "INavigationAware implementation"
         public bool IsNavigationTarget(NavigationContext navigationContext)

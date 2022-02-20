@@ -44,7 +44,7 @@ namespace Prism_WPF_Honeys.ViewModels
             NavigationParameters listNavigationParameters = new NavigationParameters();
 
             if (string.IsNullOrEmpty(navigationPath))
-                throw new ArgumentNullException();
+                throw new ArgumentNullException(nameof(navigationPath));
 
             switch (navigationPath)
             {
@@ -54,7 +54,7 @@ namespace Prism_WPF_Honeys.ViewModels
                     _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.CalendarFooterContentRegion);
                     _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.CalendarListContentRegion, listNavigationParameters);
                     _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.CalendarNavigationContentRegion);
-                    _regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.CalendarRibbonContentRegion);
+                    //_regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.CalendarRibbonContentRegion);
 
                     break;
 
@@ -64,7 +64,7 @@ namespace Prism_WPF_Honeys.ViewModels
                     _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.ContactsFooterContentRegion);
                     _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.ContactsListContentRegion, listNavigationParameters);
                     _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.ContactsNavigationContentRegion);
-                    _regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.ContactsRibbonContentRegion);
+                    //_regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.ContactsRibbonContentRegion);
 
                     break;
 
@@ -74,7 +74,7 @@ namespace Prism_WPF_Honeys.ViewModels
                     _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.MailFooterContentRegion);
                     _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.MailListContentRegion, listNavigationParameters);
                     _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.MailNavigationContentRegion);
-                    _regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.MailRibbonContentRegion);
+                    //_regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.MailRibbonContentRegion);
 
                     break;
             }

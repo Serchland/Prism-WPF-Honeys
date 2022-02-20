@@ -4,5 +4,6 @@
              xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
              Header="Actions">
 
-    Contacts Ribbon content goes here.
+    <ribbon:RibbonButton Label="{Binding TestProperty}"
+                         Command="{Binding TestCommand}"></ribbon:RibbonButton>
 </ribbon:RibbonTab>

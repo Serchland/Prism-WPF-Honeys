@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using PrismWPFHoneys.Core.Types.Interfaces;
+using System.Windows.Controls;
 
 namespace PrismWPFHoneys.Core.Views
 {
