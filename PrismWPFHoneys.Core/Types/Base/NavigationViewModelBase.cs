@@ -27,7 +27,7 @@ namespace PrismWPFHoneys.Core.Types.Base
         private void ExecuteNavigateCommand(string navigationPath)
         {
             if (string.IsNullOrEmpty(navigationPath))
-                throw new ArgumentNullException();
+                throw new ArgumentNullException(nameof(navigationPath));
 
             _applicationCommands.NavigationNavigateCommand.Execute(navigationPath);
         }

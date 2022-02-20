@@ -7,8 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace Prism_WPF_Honeys.ShellPrism.CustomRegions
@@ -75,7 +73,7 @@ namespace Prism_WPF_Honeys.ShellPrism.CustomRegions
 
                         if (!ShouldKeepAlive(oldview))
                         {
-
+                            _dependentViewCache.Remove(oldview);
                         }
                     }
                 }

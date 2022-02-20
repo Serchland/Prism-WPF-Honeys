@@ -8,7 +8,6 @@ namespace PrismWPFHoneys.Modules.Mail.Views
     /// Lógica de interacción para AppNavigation.xaml
     /// </summary>
     /// 
-    [DependentView(RegionNames.RibbonContentRegion, typeof(AppRibbonTab))]
     public partial class AppNavigation : UserControl
     {
         public AppNavigation()

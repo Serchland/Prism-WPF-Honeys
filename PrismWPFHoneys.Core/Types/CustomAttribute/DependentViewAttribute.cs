@@ -10,10 +10,11 @@ namespace PrismWPFHoneys.Core.Types.CustomAttribute
 
         public DependentViewAttribute(String region, Type type)
         {
-            if (string.IsNullOrEmpty(region) | type == null)
-            {
-                throw new ArgumentNullException();
-            }
+            if (string.IsNullOrEmpty(region))
+                throw new ArgumentNullException(nameof(region));
+
+            if (type == null)
+                throw new ArgumentNullException(nameof(type));
 
             Region = region;
             Type = type;
