@@ -11,6 +11,7 @@ Steps definition:
 7. Step 7: Fixed navigation problems with ribbonTabs and connection of the navigation tree with the list in the mail project. Do you want to implement it in Calendars and Contacts?
 8. Step 8: Connected the navigation tree of all modules with the list.
 9. Step 9: Sharing viewModel between Ribbon and List.
+10. Step 10: Splash screen.
 
 This repository is under construction, please check it from time to time for the latest updates.
 
