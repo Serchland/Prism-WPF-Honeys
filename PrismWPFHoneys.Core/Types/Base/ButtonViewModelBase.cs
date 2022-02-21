@@ -1,6 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using PrismWPFHoneys.Core.Types.Interfaces;
+using System.Windows;
 
 namespace PrismWPFHoneys.Core.Types.Base
 {
@@ -9,9 +10,23 @@ namespace PrismWPFHoneys.Core.Types.Base
         IApplicationCommands _applicationCommands;
         public ButtonViewModelBase(IApplicationCommands applicationCommands)
         {
+            _visibility = Visibility.Collapsed;
             _applicationCommands = applicationCommands;
         }
 
+        private Visibility _visibility;
+        public Visibility Visibility
+        {
+            get
+            {
+                return _visibility;
+            }
+            set
+            {
+                _visibility = value;
+                RaisePropertyChanged("Visibility");
+            }
+        }
         public string ModuleName { get; set; }
 
         private DelegateCommand<string> _selectedApplicationCommand;

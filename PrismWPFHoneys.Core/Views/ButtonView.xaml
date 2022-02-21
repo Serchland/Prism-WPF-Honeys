@@ -3,5 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Content="{Binding Caption}"
         Command="{Binding SelectedApplicationCommand}"
-        CommandParameter="{Binding ModuleName}">
+        CommandParameter="{Binding ModuleName}"
+        Visibility="{Binding Visibility}">
 </Button>

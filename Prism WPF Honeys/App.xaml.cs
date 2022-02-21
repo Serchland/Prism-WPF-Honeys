@@ -25,6 +25,18 @@ namespace Prism_WPF_Honeys
             return Container.Resolve<MainWindow>();
         }
 
+        protected override void OnInitialized()
+        {
+            var login = Container.Resolve<Login>();
+            var result = login.ShowDialog();
+
+            if ((bool)result)
+                base.OnInitialized();
+            else
+                Application.Current.Shutdown();
+            
+            //TODO: Apply styles.
+        }
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
