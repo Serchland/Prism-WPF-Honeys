@@ -1,4 +1,5 @@
 ﻿using Prism.Regions;
+using PrismWPFHoneys.Business;
 using PrismWPFHoneys.Core.Types.Base;
 using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Prism;
@@ -22,11 +23,11 @@ namespace PrismWPFHoneys.Modules.Mail.ViewModels
 
             NavigationItem root = new NavigationItem();
             root.Caption = "Root Mail";
-            root.NavigationPath = GetNavigationPath("Default");
+            root.NavigationPath = GetNavigationPath(Folders.Mail.Default);
 
-            root.Items.Add(new NavigationItem() { Caption = "Inbox", NavigationPath = GetNavigationPath("Inbox") });
-            root.Items.Add(new NavigationItem() { Caption = "Outbox", NavigationPath = GetNavigationPath("Outbox") });
-            root.Items.Add(new NavigationItem() { Caption = "Draft", NavigationPath = GetNavigationPath("Draft") });
+            root.Items.Add(new NavigationItem() { Caption = Folders.Mail.Inbox, NavigationPath = GetNavigationPath(Folders.Mail.Inbox) });
+            root.Items.Add(new NavigationItem() { Caption = Folders.Mail.Outbox, NavigationPath = GetNavigationPath(Folders.Mail.Outbox) });
+            root.Items.Add(new NavigationItem() { Caption = Folders.Mail.Draft, NavigationPath = GetNavigationPath(Folders.Mail.Draft) });
 
             Items.Add(root);
         }

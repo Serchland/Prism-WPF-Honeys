@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Core", "Pris
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Business", "PrismWPFHoneys.Business\PrismWPFHoneys.Business.csproj", "{BD351459-E390-4962-BCE0-50EAE6C28816}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Services", "PrismWPFHoneys.Services\PrismWPFHoneys.Services.csproj", "{E28227E7-A70C-4425-84D2-A2D1CB90122C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Services.Interfaces", "PrismWPFHoneys.Services.Interfaces\PrismWPFHoneys.Services.Interfaces.csproj", "{0C42E57A-8E49-41FE-A6FB-759A658E324C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +51,14 @@ Global
 		{BD351459-E390-4962-BCE0-50EAE6C28816}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD351459-E390-4962-BCE0-50EAE6C28816}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD351459-E390-4962-BCE0-50EAE6C28816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E28227E7-A70C-4425-84D2-A2D1CB90122C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E28227E7-A70C-4425-84D2-A2D1CB90122C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E28227E7-A70C-4425-84D2-A2D1CB90122C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E28227E7-A70C-4425-84D2-A2D1CB90122C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C42E57A-8E49-41FE-A6FB-759A658E324C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C42E57A-8E49-41FE-A6FB-759A658E324C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C42E57A-8E49-41FE-A6FB-759A658E324C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C42E57A-8E49-41FE-A6FB-759A658E324C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

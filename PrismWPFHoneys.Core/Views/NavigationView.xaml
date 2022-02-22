@@ -1,9 +1,9 @@
 ﻿<TreeView x:Class="PrismWPFHoneys.Core.Views.NavigationView"
           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-          xmlns:core="clr-namespace:PrismWPFHoneys.Core.Types.Types"
-          xmlns:converters="clr-namespace:PrismWPFHoneys.Core.Views.Converters"
           xmlns:behaviours="http://schemas.microsoft.com/xaml/behaviors"
+          xmlns:business="clr-namespace:PrismWPFHoneys.Business;assembly=PrismWPFHoneys.Business"
+          xmlns:converters="clr-namespace:PrismWPFHoneys.Core.Views.Converters"
           ItemsSource="{Binding Items}"
           Name="NavigationTree"
           Loaded="TreeView_Loaded">
@@ -20,7 +20,7 @@
     </behaviours:Interaction.Triggers>
     
     <TreeView.ItemTemplate>
-        <HierarchicalDataTemplate DataType="{x:Type core:NavigationItem}"
+        <HierarchicalDataTemplate DataType="{x:Type business:NavigationItem}"
                                   ItemsSource="{Binding Items}">
 
             <TextBlock Text="{Binding Caption}"></TextBlock>

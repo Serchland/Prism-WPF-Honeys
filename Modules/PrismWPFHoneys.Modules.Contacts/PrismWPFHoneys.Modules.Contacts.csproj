@@ -95,6 +95,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\PrismWPFHoneys.Business\PrismWPFHoneys.Business.csproj">
+      <Project>{BD351459-E390-4962-BCE0-50EAE6C28816}</Project>
+      <Name>PrismWPFHoneys.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\PrismWPFHoneys.Core\PrismWPFHoneys.Core.csproj">
       <Project>{f89a1943-10dc-4395-a255-380486ffbe09}</Project>
       <Name>PrismWPFHoneys.Core</Name>

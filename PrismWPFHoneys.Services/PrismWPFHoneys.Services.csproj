@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD351459-E390-4962-BCE0-50EAE6C28816}</ProjectGuid>
+    <ProjectGuid>{E28227E7-A70C-4425-84D2-A2D1CB90122C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PrismWPFHoneys.Business</RootNamespace>
-    <AssemblyName>PrismWPFHoneys.Business</AssemblyName>
+    <RootNamespace>PrismWPFHoneys.Services</RootNamespace>
+    <AssemblyName>PrismWPFHoneys.Services</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Prism, Version=8.1.97.5141, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Core.8.1.97\lib\net47\Prism.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,13 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessBase.cs" />
-    <Compile Include="MailMessage.cs" />
-    <Compile Include="NavigationItem.cs" />
+    <Compile Include="MailServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\PrismWPFHoneys.Business\PrismWPFHoneys.Business.csproj">
+      <Project>{BD351459-E390-4962-BCE0-50EAE6C28816}</Project>
+      <Name>PrismWPFHoneys.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrismWPFHoneys.Services.Interfaces\PrismWPFHoneys.Services.Interfaces.csproj">
+      <Project>{0c42e57a-8e49-41fe-a6fb-759a658e324c}</Project>
+      <Name>PrismWPFHoneys.Services.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

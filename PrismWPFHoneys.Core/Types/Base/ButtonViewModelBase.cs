@@ -17,16 +17,10 @@ namespace PrismWPFHoneys.Core.Types.Base
         private Visibility _visibility;
         public Visibility Visibility
         {
-            get
-            {
-                return _visibility;
-            }
-            set
-            {
-                _visibility = value;
-                RaisePropertyChanged("Visibility");
-            }
+            get { return _visibility; }
+            set { SetProperty(ref _visibility, value); }
         }
+        
         public string ModuleName { get; set; }
 
         private DelegateCommand<string> _selectedApplicationCommand;
