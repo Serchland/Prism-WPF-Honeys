@@ -1,8 +1,6 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
-using Prism.Regions;
 using PrismWPFHoneys.Core.Types.Interfaces;
-using PrismWPFHoneys.Core.Types.Prism;
 using System;
 
 namespace PrismWPFHoneys.Core.Types.Base

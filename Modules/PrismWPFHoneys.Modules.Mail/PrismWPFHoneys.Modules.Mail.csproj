@@ -128,6 +128,14 @@
       <Project>{f89a1943-10dc-4395-a255-380486ffbe09}</Project>
       <Name>PrismWPFHoneys.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\PrismWPFHoneys.Services.Interfaces\PrismWPFHoneys.Services.Interfaces.csproj">
+      <Project>{0c42e57a-8e49-41fe-a6fb-759a658e324c}</Project>
+      <Name>PrismWPFHoneys.Services.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PrismWPFHoneys.Services\PrismWPFHoneys.Services.csproj">
+      <Project>{e28227e7-a70c-4425-84d2-a2d1cb90122c}</Project>
+      <Name>PrismWPFHoneys.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

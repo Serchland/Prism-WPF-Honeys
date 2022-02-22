@@ -7,7 +7,7 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 {
     public class ListViewModel : BindableBase, INavigationAware
     {
-        private string _lastSelectedNavigationItem;
+        private string _currentFolder;
         public string Message { get; set; }
         public string TestProperty { get; }
 
@@ -43,10 +43,10 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
             string param = navigationContext.Parameters.GetValue<string>("id");
 
             if (param == AppModuleNames.ContactsModuleName)
-                param = _lastSelectedNavigationItem;
+                param = _currentFolder;
 
-            Message = string.Format("{0} {1}", "List from contacts module", param); 
-            _lastSelectedNavigationItem = param;
+            Message = string.Format("{0} {1}", "List from contacts module", param);
+            _currentFolder = param;
 
             RaisePropertyChanged("Message");
         }

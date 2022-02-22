@@ -1,4 +1,5 @@
-﻿using PrismWPFHoneys.Core.Types.Types;
+﻿using PrismWPFHoneys.Business;
+using PrismWPFHoneys.Core.Types.Types;
 using System;
 using System.Globalization;
 using System.Windows.Data;

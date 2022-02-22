@@ -5,6 +5,8 @@ using Prism.Regions;
 using PrismWPFHoneys.Core.Types.Prism;
 using PrismWPFHoneys.Modules.Mail.ViewModels;
 using PrismWPFHoneys.Modules.Mail.Views;
+using PrismWPFHoneys.Services;
+using PrismWPFHoneys.Services.Interfaces;
 
 namespace PrismWPFHoneys.Modules.Mail
 {
@@ -38,6 +40,8 @@ namespace PrismWPFHoneys.Modules.Mail
             containerRegistry.RegisterForNavigation<AppList, ListViewModel>(RegisterForNavigation.MailListContentRegion);
             containerRegistry.RegisterForNavigation<AppNavigation, NavigationViewModel>(RegisterForNavigation.MailNavigationContentRegion);
             containerRegistry.RegisterForNavigation<AppRibbonTab, RibbonTabViewModel>(RegisterForNavigation.MailRibbonContentRegion);
+
+            containerRegistry.RegisterSingleton<IMailService, MailServices>();
         }
     }
 }

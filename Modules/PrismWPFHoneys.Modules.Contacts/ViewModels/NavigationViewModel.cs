@@ -1,4 +1,5 @@
-﻿using PrismWPFHoneys.Core.Types.Base;
+﻿using PrismWPFHoneys.Business;
+using PrismWPFHoneys.Core.Types.Base;
 using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Prism;
 using PrismWPFHoneys.Core.Types.Types;

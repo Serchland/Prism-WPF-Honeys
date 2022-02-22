@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 
-namespace PrismWPFHoneys.Core.Types.Types
+namespace PrismWPFHoneys.Business
 {
     public class NavigationItem
     {
