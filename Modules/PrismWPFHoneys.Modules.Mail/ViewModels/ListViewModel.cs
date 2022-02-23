@@ -29,6 +29,13 @@ namespace PrismWPFHoneys.Modules.Mail.ViewModels
             set { SetProperty(ref _message, value); }
         }
 
+        private MailMessage _selectedMessage;
+        public MailMessage SelectedMessage
+        {
+            get { return _selectedMessage; }
+            set { SetProperty(ref _selectedMessage, value); }
+        }
+
         private string _serviceInfo;
         public string ServiceInfo
         {
@@ -62,7 +69,7 @@ namespace PrismWPFHoneys.Modules.Mail.ViewModels
 
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
-            string _currentFolder = navigationContext.Parameters.GetValue<string>("id");
+            _currentFolder = navigationContext.Parameters.GetValue<string>("id");
             LoadMessages(_currentFolder);
         }
 

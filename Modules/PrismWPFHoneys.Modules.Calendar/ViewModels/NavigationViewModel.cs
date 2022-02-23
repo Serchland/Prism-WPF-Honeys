@@ -1,9 +1,7 @@
-﻿using Prism.Regions;
-using PrismWPFHoneys.Business;
+﻿using PrismWPFHoneys.Business;
 using PrismWPFHoneys.Core.Types.Base;
 using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Prism;
-using PrismWPFHoneys.Core.Types.Types;
 using System.Collections.ObjectModel;
 
 namespace PrismWPFHoneys.Modules.Calendar.ViewModels
