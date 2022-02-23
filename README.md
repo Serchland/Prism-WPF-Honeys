@@ -1,5 +1,6 @@
 # Prism-WPF-Honeys
 Prism WPF reference architecture step by step. Based on [@brianlagunas impressive series in youtube](https://www.youtube.com/playlist?list=PLG8rj6Rr0BU8MaincrMrHuhJrI2Id8RSW)
+using Windows controls.
 
 Steps definition:
 1. Step 1: Added Prism blank project using Prism template pack v2.3.0 visual studio marketplace template.
@@ -13,6 +14,7 @@ Steps definition:
 9. Step 9: Sharing viewModel between Ribbon and List.
 10. Step 10: Splash screen.
 11. Step 11: Implemented mail service in the mail project Can you implement a service in the calendar and contacts projects?
+12. Step 12: Binding data to the mail grid.
 
 This repository is under construction, please check it from time to time for the latest updates.
 
