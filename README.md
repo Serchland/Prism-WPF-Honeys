@@ -15,6 +15,7 @@ Steps definition:
 10. Step 10: Splash screen.
 11. Step 11: Implemented mail service in the mail project Can you implement a service in the calendar and contacts projects?
 12. Step 12: Binding data to the mail grid.
+13. Step 13: Launch dialog from the new button and the context menu in the mail project.
 
 This repository is under construction, please check it from time to time for the latest updates.
 
