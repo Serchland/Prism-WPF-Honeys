@@ -1,6 +1,6 @@
 # Prism-WPF-Honeys
 Prism WPF reference architecture step by step. Based on [@brianlagunas impressive series in youtube](https://www.youtube.com/playlist?list=PLG8rj6Rr0BU8MaincrMrHuhJrI2Id8RSW)
-using Windows controls.
+but using Windows Ribbon control.
 
 Steps definition:
 1. Step 1: Added Prism blank project using Prism template pack v2.3.0 visual studio marketplace template.
