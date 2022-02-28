@@ -57,6 +57,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ShellPrism\Dialogs\DetailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -73,6 +77,10 @@
     <Compile Include="ShellPrism\CustomRegions\DependentViewInfo.cs" />
     <Compile Include="ShellPrism\CustomRegions\RibbonRegionAdapter.cs" />
     <Compile Include="ShellPrism\CustomRegions\StackPanelRegionAdapter.cs" />
+    <Compile Include="ShellPrism\Dialogs\DetailWindow.xaml.cs">
+      <DependentUpon>DetailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShellPrism\Dialogs\MyDialogService.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\Login.xaml.cs">
@@ -122,9 +130,17 @@
       <Project>{cc4f4a1e-4632-4779-a88a-8bf5a0ff4668}</Project>
       <Name>PrismWPFHoneys.Modules.Mail</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PrismWPFHoneys.Business\PrismWPFHoneys.Business.csproj">
+      <Project>{BD351459-E390-4962-BCE0-50EAE6C28816}</Project>
+      <Name>PrismWPFHoneys.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PrismWPFHoneys.Core\PrismWPFHoneys.Core.csproj">
       <Project>{f89a1943-10dc-4395-a255-380486ffbe09}</Project>
       <Name>PrismWPFHoneys.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrismWPFHoneys.Services.Interfaces\PrismWPFHoneys.Services.Interfaces.csproj">
+      <Project>{0C42E57A-8E49-41FE-A6FB-759A658E324C}</Project>
+      <Name>PrismWPFHoneys.Services.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

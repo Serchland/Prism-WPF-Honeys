@@ -9,5 +9,6 @@ namespace PrismWPFHoneys.Services.Interfaces
         IList<MailMessage> GetInboxItems();
         IList<MailMessage> GetOutboxItems();
         IList<MailMessage> GetDraftItems();
+        MailMessage GetDetailMessage(int messageId);
     }
 }

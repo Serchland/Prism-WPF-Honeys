@@ -4,6 +4,12 @@
                   xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
                   Header="Actions">
 
-    <ribbon:RibbonButton Label="{Binding TestProperty}"
-                         Command="{Binding TestCommand}"></ribbon:RibbonButton>
+    <ribbon:RibbonGroup>
+        <ribbon:RibbonButton Label="{Binding NewMailCaption}"
+                             LargeImageSource ="new-message.png"
+                             Command="{Binding MailDetailCommand}"
+                             VerticalAlignment="Bottom"
+                             HorizontalAlignment="Center">
+        </ribbon:RibbonButton>
+    </ribbon:RibbonGroup>
 </ribbon:RibbonTab>

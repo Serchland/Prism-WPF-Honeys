@@ -1,10 +1,11 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
+using Prism.Services.Dialogs;
 using Prism_WPF_Honeys.ShellPrism.CustomRegions;
+using Prism_WPF_Honeys.ShellPrism.Dialogs;
 using Prism_WPF_Honeys.Views;
 using PrismWPFHoneys.Core.Types.Interfaces;
-using PrismWPFHoneys.Core.Types.Prism;
 using PrismWPFHoneys.Modules.Calendar;
 using PrismWPFHoneys.Modules.Contacts;
 using PrismWPFHoneys.Modules.Mail;
@@ -27,19 +28,22 @@ namespace Prism_WPF_Honeys
 
         protected override void OnInitialized()
         {
-            var login = Container.Resolve<Login>();
-            var result = login.ShowDialog();
+            //var login = Container.Resolve<Login>();
+            //var result = login.ShowDialog();
 
-            if ((bool)result)
+            //if ((bool)result)
                 base.OnInitialized();
-            else
-                Application.Current.Shutdown();
-            
-            //TODO: Apply styles.
+            //else
+            //    Application.Current.Shutdown();
+
+            ////TODO: Apply styles.
         }
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
+            containerRegistry.RegisterSingleton<IMyDialogService, MyDialogService>();
+
+            //containerRegistry.RegisterDialog<CustomDetailDialog>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

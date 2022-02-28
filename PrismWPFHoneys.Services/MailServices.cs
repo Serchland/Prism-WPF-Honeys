@@ -69,11 +69,17 @@ namespace PrismWPFHoneys.Services
                         Subject = "What the heck!"
                     }
             };
+
+            DetailMessage = new MailMessage()
+            {
+                Subject = "Detail message"
+            };
         }
 
         public IList<MailMessage> OutboxItems { get; set; }
         public IList<MailMessage> InboxItems { get; set; }
         public IList<MailMessage> DraftItems { get; set; }
+        public MailMessage DetailMessage { get; set; }
 
         public IList<MailMessage> GetOutboxItems()
         {
@@ -88,6 +94,11 @@ namespace PrismWPFHoneys.Services
         public IList<MailMessage> GetDraftItems()
         {
             return DraftItems;
+        }
+
+        public MailMessage GetDetailMessage(int messageID)
+        {
+            return DetailMessage;
         }
     }
 }
