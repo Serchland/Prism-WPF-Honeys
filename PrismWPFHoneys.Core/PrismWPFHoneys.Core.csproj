@@ -62,6 +62,7 @@
     <Compile Include="Types\CustomAttribute\DependentViewAttribute.cs" />
     <Compile Include="Types\Base\ButtonViewModelBase.cs" />
     <Compile Include="Types\Events\OnModuleInitializedEvent.cs" />
+    <Compile Include="Types\Interfaces\IMyDialogService.cs" />
     <Compile Include="Types\Interfaces\INavigationPath.cs" />
     <Compile Include="Types\Interfaces\ISupportDataContext.cs" />
     <Compile Include="Types\Interfaces\IApplicationCommands.cs" />

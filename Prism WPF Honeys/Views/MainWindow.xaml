@@ -17,16 +17,13 @@
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <!--RibbonContent-->
-        <ContentControl Grid.Column="0"
-                        Grid.ColumnSpan="2"
-                        Grid.Row="0">
-            
-            <Ribbon Name="RibbonControl"
-                    prism:RegionManager.RegionName="{x:Static core:RegionNames.RibbonContentRegion}">
-            </Ribbon>
-            
-        </ContentControl>
+        <!--RibbonControl-->
+        <Ribbon Name="RibbonControl"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Grid.Row="0"
+                prism:RegionManager.RegionName="{x:Static core:RegionNames.RibbonContentRegion}">
+        </Ribbon>
 
         <!--NavigationContent-->
         <Grid Grid.Column="0"

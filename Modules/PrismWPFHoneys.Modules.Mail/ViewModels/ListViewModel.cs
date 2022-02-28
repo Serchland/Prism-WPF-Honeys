@@ -1,8 +1,9 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
+using Prism.Services.Dialogs;
 using PrismWPFHoneys.Business;
-using PrismWPFHoneys.Core.Types.Prism;
+using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Types;
 using PrismWPFHoneys.Services.Interfaces;
 using System;
@@ -14,11 +15,14 @@ namespace PrismWPFHoneys.Modules.Mail.ViewModels
     {
         private string _currentFolder;
 
+        private IMyDialogService _dialogService;
         private IMailService _mailService;
 
-        public ListViewModel(IMailService mailService)
+        public ListViewModel(IMailService mailService, IMyDialogService dialogService)
         {
-            TestProperty = "Mail TestProperty";
+            _newMailCaption = "New";
+
+            _dialogService = dialogService;
             _mailService = mailService;
         }
 
@@ -43,16 +47,23 @@ namespace PrismWPFHoneys.Modules.Mail.ViewModels
             set { SetProperty(ref _serviceInfo, value); }
         }
 
-        public string TestProperty { get; }
+        private readonly string _newMailCaption;
+        public string NewMailCaption
+        {
+            get { return _newMailCaption; }
+        }
 
         #region "Commands"
-        private DelegateCommand _testCommand;
-        public DelegateCommand TestCommand =>
-            _testCommand ?? (_testCommand = new DelegateCommand(ExecuteCommandName));
+        private DelegateCommand _mailDetailCommand;
+        public DelegateCommand MailDetailCommand =>
+            _mailDetailCommand ?? (_mailDetailCommand = new DelegateCommand(MailDetailExecute));
 
-        void ExecuteCommandName()
+        void MailDetailExecute()
         {
-            System.Windows.MessageBox.Show("Command from Mail");
+            if (SelectedMessage is null)
+                throw new NullReferenceException("SelectedMessage cant be null");
+
+            _dialogService.Show("MailDetail", SelectedMessage.Id);
         }
         #endregion
 

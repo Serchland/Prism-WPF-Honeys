@@ -1,0 +1,11 @@
+﻿<ribbon:RibbonTab x:Class="PrismWPFHoneys.Modules.Mail.Views.Dialogs.MailDetail"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
+                  Header="Actions"
+                  x:Name="MailDetailTab">
+
+    <ribbon:RibbonGroup>
+        <ribbon:RibbonButton Label="Detail tab"></ribbon:RibbonButton>
+    </ribbon:RibbonGroup>
+</ribbon:RibbonTab>

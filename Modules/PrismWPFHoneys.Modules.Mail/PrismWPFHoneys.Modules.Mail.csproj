@@ -50,6 +50,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Dialogs\MailDetail.xaml.cs">
+      <DependentUpon>MailDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MailModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -67,6 +70,7 @@
     <Compile Include="ViewModels\ButtonViewModel.cs" />
     <Compile Include="ViewModels\FooterViewModel.cs" />
     <Compile Include="ViewModels\ListViewModel.cs" />
+    <Compile Include="ViewModels\Dialogs\MailDetailViewModel.cs" />
     <Compile Include="ViewModels\NavigationViewModel.cs" />
     <Compile Include="ViewModels\RibbonTabViewModel.cs" />
     <Compile Include="Views\AppButton.xaml.cs">
@@ -95,6 +99,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\Dialogs\MailDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AppButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -136,6 +144,9 @@
       <Project>{e28227e7-a70c-4425-84d2-a2d1cb90122c}</Project>
       <Name>PrismWPFHoneys.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\new-message.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

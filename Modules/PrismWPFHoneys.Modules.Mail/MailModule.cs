@@ -4,7 +4,9 @@ using Prism.Mvvm;
 using Prism.Regions;
 using PrismWPFHoneys.Core.Types.Prism;
 using PrismWPFHoneys.Modules.Mail.ViewModels;
+using PrismWPFHoneys.Modules.Mail.ViewModels.Dialogs;
 using PrismWPFHoneys.Modules.Mail.Views;
+using PrismWPFHoneys.Modules.Mail.Views.Dialogs;
 using PrismWPFHoneys.Services;
 using PrismWPFHoneys.Services.Interfaces;
 
@@ -33,13 +35,14 @@ namespace PrismWPFHoneys.Modules.Mail
             ViewModelLocationProvider.Register<AppFooter, FooterViewModel>();
             ViewModelLocationProvider.Register<AppList, ListViewModel>();
             ViewModelLocationProvider.Register<AppNavigation, NavigationViewModel>();
-            ViewModelLocationProvider.Register<AppRibbonTab, RibbonTabViewModel>();
+            //ViewModelLocationProvider.Register<AppRibbonTab, RibbonTabViewModel>();
 
             containerRegistry.RegisterForNavigation<AppButton, ButtonViewModel>(RegisterForNavigation.MailButtonContentRegion);
             containerRegistry.RegisterForNavigation<AppFooter, FooterViewModel>(RegisterForNavigation.MailFooterContentRegion);
             containerRegistry.RegisterForNavigation<AppList, ListViewModel>(RegisterForNavigation.MailListContentRegion);
             containerRegistry.RegisterForNavigation<AppNavigation, NavigationViewModel>(RegisterForNavigation.MailNavigationContentRegion);
-            containerRegistry.RegisterForNavigation<AppRibbonTab, RibbonTabViewModel>(RegisterForNavigation.MailRibbonContentRegion);
+            //containerRegistry.RegisterForNavigation<AppRibbonTab, RibbonTabViewModel>(RegisterForNavigation.MailRibbonContentRegion);
+            containerRegistry.RegisterForNavigation<MailDetail, MailDetailViewModel>("MailDetail");
 
             containerRegistry.RegisterSingleton<IMailService, MailServices>();
         }
