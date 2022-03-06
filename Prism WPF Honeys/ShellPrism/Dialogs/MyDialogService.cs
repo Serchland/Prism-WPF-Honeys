@@ -1,13 +1,9 @@
-﻿using Prism.Ioc;
-using Prism.Regions;
-using Prism.Services.Dialogs;
+﻿using Prism.Regions;
 using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Prism;
 using PrismWPFHoneys.Services.Interfaces;
-using PrismWPFHoneys.ShellPrism.Dialogs;
-using System;
+using PrismWPFHoneys.Views.Dialogs;
 using System.Windows;
-using System.Windows.Media;
 
 namespace Prism_WPF_Honeys.ShellPrism.Dialogs
 {

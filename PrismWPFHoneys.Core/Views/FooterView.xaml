@@ -1,6 +1,7 @@
 ﻿<StatusBar x:Class="PrismWPFHoneys.Core.Views.FooterView"
            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           MinHeight="25">
 
     <StatusBarItem>
         <TextBlock Text="{Binding Caption}"></TextBlock>

@@ -1,12 +1,11 @@
-﻿using System.Windows.Controls;
-using System.Windows.Controls.Ribbon;
+﻿using Fluent;
 
 namespace PrismWPFHoneys.Modules.Mail.Views.Dialogs
 {
     /// <summary>
     /// Interaction logic for PrismUserControl
     /// </summary>
-    public partial class MailDetail : RibbonTab
+    public partial class MailDetail : RibbonTabItem
     {
         public MailDetail()
         {

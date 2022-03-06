@@ -38,7 +38,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Controls.Ribbon" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -57,7 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ShellPrism\Dialogs\DetailWindow.xaml">
+    <Page Include="Views\Base\ButtonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\DetailWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -77,7 +80,10 @@
     <Compile Include="ShellPrism\CustomRegions\DependentViewInfo.cs" />
     <Compile Include="ShellPrism\CustomRegions\RibbonRegionAdapter.cs" />
     <Compile Include="ShellPrism\CustomRegions\StackPanelRegionAdapter.cs" />
-    <Compile Include="ShellPrism\Dialogs\DetailWindow.xaml.cs">
+    <Compile Include="Views\Base\ButtonView.xaml.cs">
+      <DependentUpon>ButtonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\DetailWindow.xaml.cs">
       <DependentUpon>DetailWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ShellPrism\Dialogs\MyDialogService.cs" />
@@ -115,6 +121,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Fluent.Ribbon">
+      <Version>9.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="MahApps.Metro">
+      <Version>2.4.9</Version>
+    </PackageReference>
+    <PackageReference Include="MahApps.Metro.IconPacks">
+      <Version>4.11.0</Version>
+    </PackageReference>
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>

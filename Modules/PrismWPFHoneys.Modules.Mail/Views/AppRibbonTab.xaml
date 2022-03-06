@@ -1,15 +1,15 @@
-﻿<ribbon:RibbonTab x:Class="PrismWPFHoneys.Modules.Mail.Views.AppRibbonTab"
+﻿<fluent:RibbonTabItem x:Class="PrismWPFHoneys.Modules.Mail.Views.AppRibbonTab"
                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                  xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
-                  Header="Actions">
+                  xmlns:fluent="urn:fluent-ribbon"    
+                  Header="{StaticResource Mail}"
+                  IsSelected="True"
+                  Loaded="RibbonTabItem_Loaded">
 
-    <ribbon:RibbonGroup>
-        <ribbon:RibbonButton Label="{Binding NewMailCaption}"
-                             LargeImageSource ="new-message.png"
-                             Command="{Binding MailDetailCommand}"
-                             VerticalAlignment="Bottom"
-                             HorizontalAlignment="Center">
-        </ribbon:RibbonButton>
-    </ribbon:RibbonGroup>
-</ribbon:RibbonTab>
+    <fluent:RibbonGroupBox Header="Actions">
+        <fluent:Button Header="{StaticResource New}"
+                       Command="{Binding MailDetailCommand}"
+                       LargeIcon="{StaticResource AddNew_ico}"/>
+    </fluent:RibbonGroupBox>
+</fluent:RibbonTabItem>
+    

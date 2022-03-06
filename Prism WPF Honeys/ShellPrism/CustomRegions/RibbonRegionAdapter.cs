@@ -1,7 +1,6 @@
-﻿using Prism.Regions;
+﻿using Fluent;
+using Prism.Regions;
 using System.Collections.Specialized;
-using System.Windows;
-using System.Windows.Controls.Ribbon;
 
 namespace PrismWPFHoneys.ShellPrism.CustomRegion
 {
@@ -19,17 +18,17 @@ namespace PrismWPFHoneys.ShellPrism.CustomRegion
             {
                 if (e.Action == NotifyCollectionChangedAction.Add)
                 {
-                    foreach (FrameworkElement element in e.NewItems)
+                    foreach (RibbonTabItem element in e.NewItems)
                     {
-                        regionTarget.Items.Add(element);
+                        regionTarget.Tabs.Add(element);
                     }
                 }
 
                 if (e.Action == NotifyCollectionChangedAction.Remove)
                 {
-                    foreach (FrameworkElement element in e.OldItems)
+                    foreach (RibbonTabItem element in e.OldItems)
                     {
-                        regionTarget.Items.Remove(element);
+                        regionTarget.Tabs.Remove(element);
                     }
                 }
             };

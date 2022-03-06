@@ -1,7 +1,8 @@
-﻿using Prism.Ioc;
+﻿using ControlzEx.Theming;
+using Fluent;
+using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
-using Prism.Services.Dialogs;
 using Prism_WPF_Honeys.ShellPrism.CustomRegions;
 using Prism_WPF_Honeys.ShellPrism.Dialogs;
 using Prism_WPF_Honeys.Views;
@@ -12,7 +13,6 @@ using PrismWPFHoneys.Modules.Mail;
 using PrismWPFHoneys.ShellPrism.CustomRegion;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Ribbon;
 
 namespace Prism_WPF_Honeys
 {
@@ -21,6 +21,11 @@ namespace Prism_WPF_Honeys
     /// </summary>
     public partial class App
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+        }
+
         protected override Window CreateShell()
         {
             return Container.Resolve<MainWindow>();
@@ -28,15 +33,17 @@ namespace Prism_WPF_Honeys
 
         protected override void OnInitialized()
         {
-            //var login = Container.Resolve<Login>();
-            //var result = login.ShowDialog();
+            var login = Container.Resolve<Login>();
+            var result = login.ShowDialog();
 
-            //if ((bool)result)
+            if ((bool)result)
                 base.OnInitialized();
-            //else
-            //    Application.Current.Shutdown();
+            else
+                Application.Current.Shutdown();
 
             ////TODO: Apply styles.
+            // Set the application theme to Dark.Green
+            //ThemeManager.Current.ChangeTheme(this, "Dark.Green");
         }
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
