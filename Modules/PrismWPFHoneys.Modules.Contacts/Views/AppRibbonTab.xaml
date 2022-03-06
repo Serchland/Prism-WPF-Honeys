@@ -1,9 +1,14 @@
-﻿<ribbon:RibbonTab x:Class="PrismWPFHoneys.Modules.Contacts.Views.AppRibbonTab"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
-             Header="Actions">
+﻿<fluent:RibbonTabItem x:Class="PrismWPFHoneys.Modules.Contacts.Views.AppRibbonTab"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:fluent="urn:fluent-ribbon"
+                      Header="Contacs"
+                      IsSelected="True"
+                      Loaded="RibbonTabItem_Loaded">
 
-    <ribbon:RibbonButton Label="{Binding TestProperty}"
-                         Command="{Binding TestCommand}"></ribbon:RibbonButton>
-</ribbon:RibbonTab>
+    <fluent:RibbonGroupBox Header="Actions">
+        <fluent:Button Header="{Binding TestProperty}"
+                       Command="{Binding TestCommand}" />
+    </fluent:RibbonGroupBox>
+</fluent:RibbonTabItem>
+

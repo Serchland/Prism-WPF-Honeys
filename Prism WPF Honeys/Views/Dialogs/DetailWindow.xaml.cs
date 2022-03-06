@@ -1,8 +1,6 @@
-﻿using PrismWPFHoneys.Core.Types.Interfaces;
-using System.Windows.Controls;
-using System.Windows.Controls.Ribbon;
+﻿using Fluent;
 
-namespace PrismWPFHoneys.ShellPrism.Dialogs
+namespace PrismWPFHoneys.Views.Dialogs
 {
     /// <summary>
     /// Interaction logic for PrismUserControl1

@@ -4,7 +4,6 @@
              xmlns:core="clr-namespace:PrismWPFHoneys.Core.Views;assembly=PrismWPFHoneys.Core"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
-    
     <Grid>
         <core:ButtonView></core:ButtonView>
     </Grid>

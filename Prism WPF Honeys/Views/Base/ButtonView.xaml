@@ -1,9 +1,8 @@
-﻿<Button x:Class="PrismWPFHoneys.Core.Views.ButtonView"
+﻿<Button x:Class="Prism_WPF_Honeys.Views.Base.ButtonView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Content="{Binding Caption}"
         Command="{Binding SelectedApplicationCommand}"
         CommandParameter="{Binding ModuleName}"
-        Visibility="{Binding Visibility}"
-        MinWidth="150"
-        MinHeight="35" />
+        Visibility="{Binding Visibility}">
+</Button>
