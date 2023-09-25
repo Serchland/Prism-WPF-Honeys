@@ -6,6 +6,6 @@
                       x:Name="MailDetailTab">
 
     <fluent:RibbonGroupBox Header="Actions">
-        <fluent:Button Header="Dummy text" />
+        <fluent:Button Header="Dummy text" Command="{Binding MapTestCommand}"/>
     </fluent:RibbonGroupBox>
 </fluent:RibbonTabItem>

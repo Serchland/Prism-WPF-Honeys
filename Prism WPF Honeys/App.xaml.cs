@@ -1,10 +1,12 @@
-﻿using ControlzEx.Theming;
+﻿using AutoMapper;
+using ControlzEx.Theming;
 using Fluent;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 using Prism_WPF_Honeys.ShellPrism.CustomRegions;
 using Prism_WPF_Honeys.ShellPrism.Dialogs;
+using Prism_WPF_Honeys.ShellPrism.Mappings;
 using Prism_WPF_Honeys.Views;
 using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Modules.Calendar;
@@ -44,13 +46,27 @@ namespace Prism_WPF_Honeys
             ////TODO: Apply styles.
             // Set the application theme to Dark.Green
             //ThemeManager.Current.ChangeTheme(this, "Dark.Green");
+
+            base.OnInitialized();
         }
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
             containerRegistry.RegisterSingleton<IMyDialogService, MyDialogService>();
 
-            //containerRegistry.RegisterDialog<CustomDetailDialog>();
+            //containerRegistry.RegisterDialog<CustomDetailDialog
+           
+            // Configurar AutoMapper
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<MappingProfile>(); // Donde MappingProfile es tu clase de perfil de mapeo
+                                                  // Configura otras asignaciones si es necesario.
+            });
+
+            IMapper mapper = config.CreateMapper();
+
+            // Registra IMapper en el contenedor de Prism para que esté disponible para la inyección de dependencias.
+            containerRegistry.RegisterInstance(mapper);
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

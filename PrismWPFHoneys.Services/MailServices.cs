@@ -1,4 +1,6 @@
 ﻿using PrismWPFHoneys.Business;
+using PrismWPFHoneys.Business.fakeObjects.svcFake1;
+using PrismWPFHoneys.Business.fakeObjects.svcFake2;
 using PrismWPFHoneys.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -99,6 +101,16 @@ namespace PrismWPFHoneys.Services
         public MailMessage GetDetailMessage(int messageID)
         {
             return DetailMessage;
+        }
+
+        public FakeResponse1 DummyRequestSvc1()
+        {
+            return new FakeResponse1(){ DummyString = "From sv1"};
+        }
+
+        public FakeResponse2 DummyRequestSvc2()
+        {
+            return new FakeResponse2() { DummyString = "From svc2" };
         }
     }
 }

@@ -124,6 +124,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection">
+      <Version>8.1.1</Version>
+    </PackageReference>
     <PackageReference Include="Fluent.Ribbon">
       <Version>9.0.3</Version>
     </PackageReference>
