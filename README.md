@@ -17,6 +17,7 @@ Steps definition:
 12. Step 12: Binding data to the mail grid.
 13. Step 13: Launch dialog from the new button and the context menu in the mail project.
 14. Step 14: Testing fluent ribbon and playing with static resources.
+15. Step 15: Push to master to test Automapper
 
 This repository is under construction, please check it from time to time for the latest updates.
 
