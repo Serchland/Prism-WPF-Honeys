@@ -8,9 +8,9 @@ namespace PrismWPFHoneys.Services.Interfaces
 {
     public interface IGestDocService
     {
-        IList<GestDocMessage> GetItem1();
-        IList<GestDocMessage> GetItem2();
-        IList<GestDocMessage> GetItem3();
+        IList<GestDocMessage> GetExpedientes();
+        IList<GestDocMessage> GetBoletines();
+        IList<GestDocMessage> GetMayores52();
         GestDocMessage GetDetailMessage(int messageId);
 
         FakeResponse1 DummyRequestSvc1();

@@ -25,9 +25,9 @@ namespace PrismWPFHoneys.Modules.GestDoc.ViewModels
             root.Caption = "Root GestDoc";
             root.NavigationPath = GetNavigationPath(Folders.GestDoc.Default);
 
-            root.Items.Add(new NavigationItem() { Caption = Folders.GestDoc.Item1, NavigationPath = GetNavigationPath(Folders.GestDoc.Item1) });
-            root.Items.Add(new NavigationItem() { Caption = Folders.GestDoc.Item2, NavigationPath = GetNavigationPath(Folders.GestDoc.Item2) });
-            root.Items.Add(new NavigationItem() { Caption = Folders.GestDoc.Item3, NavigationPath = GetNavigationPath(Folders.GestDoc.Item3) });
+            root.Items.Add(new NavigationItem() { Caption = Folders.GestDoc.Expedientes, NavigationPath = GetNavigationPath(Folders.GestDoc.Expedientes) });
+            root.Items.Add(new NavigationItem() { Caption = Folders.GestDoc.Boletines, NavigationPath = GetNavigationPath(Folders.GestDoc.Boletines) });
+            root.Items.Add(new NavigationItem() { Caption = Folders.GestDoc.Mayores52, NavigationPath = GetNavigationPath(Folders.GestDoc.Mayores52) });
 
             Items.Add(root);
         }

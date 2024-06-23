@@ -89,18 +89,18 @@ namespace PrismWPFHoneys.Modules.GestDoc.ViewModels
         {
             switch (currentFolder)
             {
-                case Folders.GestDoc.Item1:
-                    Messages = new ObservableCollection<GestDocMessage>(_GestDocService.GetItem1());
+                case Folders.GestDoc.Expedientes:
+                    Messages = new ObservableCollection<GestDocMessage>(_GestDocService.GetExpedientes());
                     ServiceInfo = "GestDocService.GetItem1 called";
                     break;
 
-                case Folders.GestDoc.Item2:
-                    Messages = new ObservableCollection<GestDocMessage>(_GestDocService.GetItem3());
+                case Folders.GestDoc.Boletines:
+                    Messages = new ObservableCollection<GestDocMessage>(_GestDocService.GetBoletines());
                     ServiceInfo = "GestDocService.GetItem2 called";
                     break;
 
-                case Folders.GestDoc.Item3:
-                    Messages = new ObservableCollection<GestDocMessage>(_GestDocService.GetItem3());
+                case Folders.GestDoc.Mayores52:
+                    Messages = new ObservableCollection<GestDocMessage>(_GestDocService.GetMayores52());
                     ServiceInfo = "GestDocService.GetItem3 called";
                     break;                
             }

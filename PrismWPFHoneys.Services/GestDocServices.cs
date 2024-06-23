@@ -18,57 +18,57 @@ namespace PrismWPFHoneys.Services
         {
             int i = 0;
             Random rand = new Random();
-            OutboxItems = new List<GestDocMessage>()
+            GetExpedientesResult = new List<GestDocMessage>()
             {
                 new GestDocMessage()
                     {
                         DateSent = DateTime.Now.Subtract(new TimeSpan(rand.Next())),
-                        From = "maria@dummy.com",
+                        From = "Expedientes",
                         Id = i++,
-                        Subject = "Help wanted"
+                        Subject = string.Format ("{0}{1}", "Expediente info:", i.ToString())
                     },
                 new GestDocMessage()
                     {
                         DateSent = DateTime.Now.Subtract(new TimeSpan(rand.Next())),
-                        From = "jenifer@dummy.com",
+                        From = "Expedientes",
                         Id = i++,
-                        Subject = "Additional info"
+                        Subject = string.Format ("{0}{1}", "Expediente info:", i.ToString())
                     }
             };
 
-            InboxItems = new List<GestDocMessage>()
+            GetBoletinesResult = new List<GestDocMessage>()
             {
                 new GestDocMessage()
                     {
                         DateSent = DateTime.Now.Subtract(new TimeSpan(rand.Next())),
-                        From = "pilar@dummy.com",
+                        From = "Boletines",
                         Id = i++,
-                        Subject = "Final project"
+                        Subject = string.Format ("{0}{1}", "Boletines info:", i.ToString())
                     },
                 new GestDocMessage()
                     {
                         DateSent = DateTime.Now.Subtract(new TimeSpan(rand.Next())),
-                        From = "cynthia@dummy.com",
+                        From = "Boletines",
                         Id = i++,
-                        Subject = "Holidays"
+                        Subject = string.Format ("{0}{1}", "Boletines info:", i.ToString())
                     }
             };
 
-            DraftItems = new List<GestDocMessage>()
+            GetMayores52Result = new List<GestDocMessage>()
             {
                 new GestDocMessage()
                     {
                         DateSent = DateTime.Now.Subtract(new TimeSpan(rand.Next())),
-                        From = "penelope@dummy.com",
+                        From = "Mayores52",
                         Id = i++,
-                        Subject = "Friday night"
+                        Subject = string.Format ("{0}{1}", "Mayores52 info:", i.ToString())
                     },
                 new GestDocMessage()
                     {
                         DateSent = DateTime.Now.Subtract(new TimeSpan(rand.Next())),
-                        From = "noelia@dummy.com",
+                        From = "Mayores 52",
                         Id = i++,
-                        Subject = "What the heck!"
+                        Subject = string.Format ("{0}{1}", "Mayores52 info:", i.ToString())
                     }
             };
 
@@ -78,24 +78,24 @@ namespace PrismWPFHoneys.Services
             };
         }
 
-        public IList<GestDocMessage> OutboxItems { get; set; }
-        public IList<GestDocMessage> InboxItems { get; set; }
-        public IList<GestDocMessage> DraftItems { get; set; }
+        public IList<GestDocMessage> GetExpedientesResult { get; set; }
+        public IList<GestDocMessage> GetBoletinesResult { get; set; }
+        public IList<GestDocMessage> GetMayores52Result { get; set; }
         public GestDocMessage DetailMessage { get; set; }
 
-        public IList<GestDocMessage> GetItem2()
+        public IList<GestDocMessage> GetBoletines()
         {
-            return OutboxItems;
+            return GetBoletinesResult;
         }
 
-        public IList<GestDocMessage> GetItem1()
+        public IList<GestDocMessage> GetExpedientes()
         {
-            return InboxItems;
+            return GetExpedientesResult;
         }
 
-        public IList<GestDocMessage> GetItem3()
+        public IList<GestDocMessage> GetMayores52()
         {
-            return DraftItems;
+            return GetMayores52Result;
         }
 
         public GestDocMessage GetDetailMessage(int messageID)

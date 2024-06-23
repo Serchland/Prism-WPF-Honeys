@@ -29,9 +29,9 @@ namespace PrismWPFHoneys.Core.Types.Types
         {
             public const string Default = "Default";
 
-            public const string Item1 = "Item 1";
-            public const string Item2 = "Item 2";
-            public const string Item3 = "Item 3";
+            public const string Expedientes = "Expedientes";
+            public const string Boletines = "Boletines";
+            public const string Mayores52 = "Mayores52";
         }
     }
 }
