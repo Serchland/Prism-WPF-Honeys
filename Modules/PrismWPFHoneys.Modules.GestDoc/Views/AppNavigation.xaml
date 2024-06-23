@@ -6,6 +6,6 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     
     <Grid>
-        <core:NavigationView></core:NavigationView>
+        <core:NavigationView ItemsSource="{Binding Items}"></core:NavigationView>
     </Grid>
 </UserControl>

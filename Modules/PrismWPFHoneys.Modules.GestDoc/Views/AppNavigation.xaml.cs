@@ -1,5 +1,6 @@
 ﻿using PrismWPFHoneys.Core.Types.CustomAttribute;
 using PrismWPFHoneys.Core.Types.Prism;
+using PrismWPFHoneys.Modules.GestDoc.ViewModels;
 using System.Windows.Controls;
 
 namespace PrismWPFHoneys.Modules.GestDoc.Views

@@ -14,12 +14,12 @@ namespace Prism_WPF_Honeys.Types.Managers
 {
     public class ModuleInitializer
     {
-        private IGestDocService _gestDocService;
+        private ISecurityService _securityService;
         private IEventAggregator _ea;
-        public ModuleInitializer(IEventAggregator ea, IGestDocService GestDocService)
+        public ModuleInitializer(IEventAggregator ea, ISecurityService SecurityService)
         {
             _ea = ea;
-            _gestDocService = GestDocService;   
+            _securityService = SecurityService;   
         }
 
         public async Task FakeLoginTaskAsync()
@@ -33,20 +33,25 @@ namespace Prism_WPF_Honeys.Types.Managers
 
         private async Task InitializeNotasModuleAsync()
         {
-            await Task.Delay(3000);
+            await Task.Delay(6000);
             _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.NotasModuleName);
         }
 
         private async Task InitializeRegistroModuleAsync()
         {
-            await Task.Delay(2000);
+            await Task.Delay(10000);
             _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.RegistroModuleName);
         }
 
         private async Task InitializeGestDocModuleAsync()
         {
             await Task.Delay(0);
-            _gestDocService.GetBoletines();
+
+
+            _securityService.GetAuthToken();
+
+
+
             _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.GestDocModuleName);
         }
 

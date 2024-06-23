@@ -16,11 +16,11 @@ namespace Prism_WPF_Honeys.ViewModels
 {
     public class LoginViewModel
     {
-        private IGestDocService _gestDocService;
+        private ISecurityService _securityService;
         private IEventAggregator _ea;
-        public LoginViewModel(IEventAggregator ea, IGestDocService GestDocService)
+        public LoginViewModel(IEventAggregator ea, ISecurityService SecurityService)
         {
-            _gestDocService = GestDocService;
+            _securityService = SecurityService;
             _ea = ea;
             //TODO: Do login tasks
         }
@@ -31,7 +31,7 @@ namespace Prism_WPF_Honeys.ViewModels
 
         private async void ExecuteAcceptCommand()
         {
-            var moduleInitializer = new ModuleInitializer(_ea, _gestDocService);
+            var moduleInitializer = new ModuleInitializer(_ea, _securityService);
             await moduleInitializer.FakeLoginTaskAsync();
         }
 

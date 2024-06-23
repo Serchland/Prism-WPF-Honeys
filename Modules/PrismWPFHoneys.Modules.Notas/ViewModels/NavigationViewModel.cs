@@ -11,10 +11,11 @@ namespace PrismWPFHoneys.Modules.Notas.ViewModels
     {
         public NavigationViewModel(IApplicationCommands applicationCommands) : base (applicationCommands)
         {
+            //Items = new ObservableCollection<NavigationItem>();
             GenerateMenu();
         }
 
-        public ObservableCollection<NavigationItem> Items { get; set; }
+        //public ObservableCollection<NavigationItem> Items { get; set; }
 
         private void GenerateMenu()
         {

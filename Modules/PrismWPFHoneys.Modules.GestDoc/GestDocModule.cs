@@ -45,6 +45,7 @@ namespace PrismWPFHoneys.Modules.GestDoc
             containerRegistry.RegisterForNavigation<GestDocDetail, GestDocDetailViewModel>("GestDocDetail");
 
             containerRegistry.RegisterSingleton<IGestDocService, GestDocServices>();
+            containerRegistry.RegisterSingleton<ISecurityService, SecurityService>();
         }
     }
 }
