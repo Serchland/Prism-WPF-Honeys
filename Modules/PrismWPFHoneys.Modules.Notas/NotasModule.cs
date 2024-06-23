@@ -3,15 +3,15 @@ using Prism.Modularity;
 using Prism.Mvvm;
 using Prism.Regions;
 using PrismWPFHoneys.Core.Types.Prism;
-using PrismWPFHoneys.Modules.Calendar.ViewModels;
-using PrismWPFHoneys.Modules.Calendar.Views;
+using PrismWPFHoneys.Modules.Notas.ViewModels;
+using PrismWPFHoneys.Modules.Notas.Views;
 
-namespace PrismWPFHoneys.Modules.Calendar
+namespace PrismWPFHoneys.Modules.Notas
 {
-    public class CalendarModule : IModule
+    public class NotasModule : IModule
     {
         IRegionManager _regionManager;
-        public CalendarModule(IRegionManager regionManager)
+        public NotasModule(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }
@@ -32,11 +32,11 @@ namespace PrismWPFHoneys.Modules.Calendar
             ViewModelLocationProvider.Register<AppNavigation, NavigationViewModel>();
             ViewModelLocationProvider.Register<AppRibbonTab, RibbonTabViewModel>();
 
-            containerRegistry.RegisterForNavigation<AppButton, ButtonViewModel>(RegisterForNavigation.CalendarButtonContentRegion);
-            containerRegistry.RegisterForNavigation<AppFooter, FooterViewModel>(RegisterForNavigation.CalendarFooterContentRegion);
-            containerRegistry.RegisterForNavigation<AppList, ListViewModel>(RegisterForNavigation.CalendarListContentRegion);
-            containerRegistry.RegisterForNavigation<AppNavigation, NavigationViewModel>(RegisterForNavigation.CalendarNavigationContentRegion);
-            containerRegistry.RegisterForNavigation<AppRibbonTab, RibbonTabViewModel>(RegisterForNavigation.CalendarRibbonContentRegion);
+            containerRegistry.RegisterForNavigation<AppButton, ButtonViewModel>(RegisterForNavigation.NotasButtonContentRegion);
+            containerRegistry.RegisterForNavigation<AppFooter, FooterViewModel>(RegisterForNavigation.NotasFooterContentRegion);
+            containerRegistry.RegisterForNavigation<AppList, ListViewModel>(RegisterForNavigation.NotasListContentRegion);
+            containerRegistry.RegisterForNavigation<AppNavigation, NavigationViewModel>(RegisterForNavigation.NotasNavigationContentRegion);
+            containerRegistry.RegisterForNavigation<AppRibbonTab, RibbonTabViewModel>(RegisterForNavigation.NotasRibbonContentRegion);
         }
     }
 }

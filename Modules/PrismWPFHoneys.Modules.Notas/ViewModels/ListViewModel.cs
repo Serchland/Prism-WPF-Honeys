@@ -3,7 +3,7 @@ using Prism.Mvvm;
 using Prism.Regions;
 using PrismWPFHoneys.Core.Types.Types;
 
-namespace PrismWPFHoneys.Modules.Calendar.ViewModels
+namespace PrismWPFHoneys.Modules.Notas.ViewModels
 {
     public class ListViewModel : BindableBase, INavigationAware
     {
@@ -13,8 +13,8 @@ namespace PrismWPFHoneys.Modules.Calendar.ViewModels
 
         public ListViewModel()
         {
-            Message = "List from calendar module";
-            TestProperty = "Calendar TestProperty";
+            Message = "List from notas module";
+            TestProperty = "Notas TestProperty";
         }
 
         #region "Commands"
@@ -24,7 +24,7 @@ namespace PrismWPFHoneys.Modules.Calendar.ViewModels
 
         void ExecuteCommandName()
         {
-            System.Windows.MessageBox.Show("Command from Calendar");
+            System.Windows.MessageBox.Show("Command from Notas");
         }
         #endregion
 
@@ -42,10 +42,10 @@ namespace PrismWPFHoneys.Modules.Calendar.ViewModels
         {
             string param = navigationContext.Parameters.GetValue<string>("id");
 
-            if (param == AppModuleNames.CalendarModuleName)
+            if (param == AppModuleNames.NotasModuleName)
                 param = _currentFolder;
 
-            Message = string.Format("{0} {1}", "List from calendar module", param);
+            Message = string.Format("{0} {1}", "List from notas module", param);
             _currentFolder = param;
 
             RaisePropertyChanged("Message");

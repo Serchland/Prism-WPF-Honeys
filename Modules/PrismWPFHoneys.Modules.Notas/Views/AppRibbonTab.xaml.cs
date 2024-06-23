@@ -1,7 +1,7 @@
 ﻿using Fluent;
 using PrismWPFHoneys.Core.Types.Interfaces;
 
-namespace PrismWPFHoneys.Modules.Calendar.Views
+namespace PrismWPFHoneys.Modules.Notas.Views
 {
     /// <summary>
     /// Lógica de interacción para AppRibbonTab.xaml

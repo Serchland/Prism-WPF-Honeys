@@ -2,7 +2,7 @@
 using PrismWPFHoneys.Core.Types.Prism;
 using System.Windows.Controls;
 
-namespace PrismWPFHoneys.Modules.Calendar.Views
+namespace PrismWPFHoneys.Modules.Notas.Views
 {
     /// <summary>
     /// Lógica de interacción para AppNavigationViewModel.xaml

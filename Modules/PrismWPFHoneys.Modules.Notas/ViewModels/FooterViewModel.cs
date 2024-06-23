@@ -1,12 +1,12 @@
 ﻿using Prism.Mvvm;
 
-namespace PrismWPFHoneys.Modules.Calendar.ViewModels
+namespace PrismWPFHoneys.Modules.Notas.ViewModels
 {
     public class FooterViewModel : BindableBase
     {
         public FooterViewModel()
         {
-            Caption = "Calendar footer";
+            Caption = "Notas footer";
         }
 
         public string Caption { get; set; }

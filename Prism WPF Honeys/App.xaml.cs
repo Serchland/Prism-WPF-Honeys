@@ -9,7 +9,7 @@ using Prism_WPF_Honeys.ShellPrism.Dialogs;
 using Prism_WPF_Honeys.ShellPrism.Mappings;
 using Prism_WPF_Honeys.Views;
 using PrismWPFHoneys.Core.Types.Interfaces;
-using PrismWPFHoneys.Modules.Calendar;
+using PrismWPFHoneys.Modules.Notas;
 using PrismWPFHoneys.Modules.Contacts;
 using PrismWPFHoneys.Modules.Mail;
 using PrismWPFHoneys.ShellPrism.CustomRegion;
@@ -73,7 +73,7 @@ namespace Prism_WPF_Honeys
         {
             moduleCatalog.AddModule<MailModule>();
             moduleCatalog.AddModule<ContactsModule>();
-            moduleCatalog.AddModule<CalendarModule>();
+            moduleCatalog.AddModule<NotasModule>();
             
         }
 

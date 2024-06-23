@@ -1,8 +1,8 @@
-﻿<fluent:RibbonTabItem x:Class="PrismWPFHoneys.Modules.Calendar.Views.AppRibbonTab"
+﻿<fluent:RibbonTabItem x:Class="PrismWPFHoneys.Modules.Notas.Views.AppRibbonTab"
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:fluent="urn:fluent-ribbon"
-                      Header="Calendar"
+                      Header="Notas"
                       IsSelected="True"
                       Loaded="RibbonTabItem_Loaded">
 

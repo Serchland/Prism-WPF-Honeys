@@ -31,19 +31,19 @@ namespace Prism_WPF_Honeys.ViewModels
 
         private void FakeLoginTask()
         {
-            Thread tCalendar = new Thread(new ThreadStart(ThreadCalendar));
+            Thread tNotas = new Thread(new ThreadStart(ThreadNotas));
             Thread tContacts = new Thread(new ThreadStart(ThreadContacts));
             Thread tMail = new Thread(new ThreadStart(ThreadMail));
 
-            tCalendar.Start();
+            tNotas.Start();
             tContacts.Start();
             tMail.Start();
         }
 
-        private void ThreadCalendar()
+        private void ThreadNotas()
         {
             Thread.Sleep(3000);
-            _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.CalendarModuleName);
+            _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.NotasModuleName);
         }
 
         private void ThreadContacts()

@@ -2,11 +2,11 @@
 {
     public static class RegisterForNavigation
     {
-        public const string CalendarButtonContentRegion = "CalendarButtonContentRegion";
-        public const string CalendarFooterContentRegion = "CalendarFooterContentRegion";
-        public const string CalendarListContentRegion = "CalendarListContentRegion";
-        public const string CalendarNavigationContentRegion = "CalendarNavigationContentRegion";
-        public const string CalendarRibbonContentRegion = "CalendarRibbonContentRegion";
+        public const string NotasButtonContentRegion = "NotasButtonContentRegion";
+        public const string NotasFooterContentRegion = "NotasFooterContentRegion";
+        public const string NotasListContentRegion = "NotasListContentRegion";
+        public const string NotasNavigationContentRegion = "NotasNavigationContentRegion";
+        public const string NotasRibbonContentRegion = "NotasRibbonContentRegion";
 
         public const string ContactsButtonContentRegion = "ContactsButtonContentRegion";
         public const string ContactsFooterContentRegion = "ContactsFooterContentRegion";

@@ -48,13 +48,13 @@ namespace Prism_WPF_Honeys.ViewModels
 
             switch (navigationPath)
             {
-                case AppModuleNames.CalendarModuleName:
-                    listNavigationParameters.Add("id", AppModuleNames.CalendarModuleName);
+                case AppModuleNames.NotasModuleName:
+                    listNavigationParameters.Add("id", AppModuleNames.NotasModuleName);
 
-                    _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.CalendarFooterContentRegion);
-                    _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.CalendarListContentRegion, listNavigationParameters);
-                    _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.CalendarNavigationContentRegion);
-                    //_regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.CalendarRibbonContentRegion);
+                    _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.NotasFooterContentRegion);
+                    _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.NotasListContentRegion, listNavigationParameters);
+                    _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.NotasNavigationContentRegion);
+                    //_regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.NotasRibbonContentRegion);
 
                     break;
 

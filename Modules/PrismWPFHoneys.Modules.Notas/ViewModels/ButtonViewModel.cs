@@ -4,7 +4,7 @@ using PrismWPFHoneys.Core.Types.Events;
 using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Types;
 
-namespace PrismWPFHoneys.Modules.Calendar.ViewModels
+namespace PrismWPFHoneys.Modules.Notas.ViewModels
 {
     public class ButtonViewModel : ButtonViewModelBase
     {
@@ -20,13 +20,13 @@ namespace PrismWPFHoneys.Modules.Calendar.ViewModels
 
         private void Initialize()
         {
-            Caption = "Calendar Button";
-            ModuleName = AppModuleNames.CalendarModuleName;
+            Caption = "Notas Button";
+            ModuleName = AppModuleNames.NotasModuleName;
         }
 
         private void ModuleInitialized(string moduleInitialized)
         {
-            if (moduleInitialized == AppModuleNames.CalendarModuleName)
+            if (moduleInitialized == AppModuleNames.NotasModuleName)
             {
                 Visibility = System.Windows.Visibility.Visible;
             }
