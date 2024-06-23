@@ -6,15 +6,28 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-
-
-        <Label Content="Perfil" HorizontalAlignment="Center" VerticalAlignment="Center" ></Label>
         
-        <core:NavigationView Grid.Row="1"
-            ItemsSource="{Binding Items}"></core:NavigationView>
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <Label Content="Perfil" Background="LightGray" HorizontalContentAlignment="Center"/>
+            <Border>
+                <TextBlock Text="Perfil de usuario" Background="White" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock.InputBindings>
+                        <MouseBinding Command="{Binding NavigationNavigateCommand}" MouseAction="LeftClick" 
+                                      CommandParameter="GestDocListContentRegion?id=UserProfile"/>
+                    </TextBlock.InputBindings>
+                </TextBlock>
+            </Border>
+            
+            <Label Content="Aplicaciones" Background="LightGray" HorizontalContentAlignment="Center"></Label>
+        </StackPanel>
+
+        <core:NavigationView Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Items}"></core:NavigationView>
     </Grid>
 </UserControl>

@@ -4,7 +4,6 @@
           xmlns:behaviours="http://schemas.microsoft.com/xaml/behaviors"
           xmlns:business="clr-namespace:PrismWPFHoneys.Business;assembly=PrismWPFHoneys.Business"
           xmlns:converters="clr-namespace:PrismWPFHoneys.Core.Views.Converters"
-          Loaded="TreeView_Loaded"
           Name="NavigationTree">
 
     <TreeView.Resources>
