@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace PrismWPFHoneys.Modules.Contacts.Views
+namespace PrismWPFHoneys.Modules.Registro.Views
 {
     /// <summary>
     /// Lógica de interacción para AppFooter.xaml

@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E2B3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Modules.Mail", "Modules\PrismWPFHoneys.Modules.Mail\PrismWPFHoneys.Modules.Mail.csproj", "{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Modules.Contacts", "Modules\PrismWPFHoneys.Modules.Contacts\PrismWPFHoneys.Modules.Contacts.csproj", "{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Core", "PrismWPFHoneys.Core\PrismWPFHoneys.Core.csproj", "{F89A1943-10DC-4395-A255-380486FFBE09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Business", "PrismWPFHoneys.Business\PrismWPFHoneys.Business.csproj", "{BD351459-E390-4962-BCE0-50EAE6C28816}"
@@ -20,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Services.Interfaces", "PrismWPFHoneys.Services.Interfaces\PrismWPFHoneys.Services.Interfaces.csproj", "{0C42E57A-8E49-41FE-A6FB-759A658E324C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Modules.Notas", "Modules\PrismWPFHoneys.Modules.Notas\PrismWPFHoneys.Modules.Notas.csproj", "{3A5D216D-2F53-4584-85DA-FA8A4B156003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWPFHoneys.Modules.Registro", "Modules\PrismWPFHoneys.Modules.Registro\PrismWPFHoneys.Modules.Registro.csproj", "{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,6 @@ Global
 		{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F89A1943-10DC-4395-A255-380486FFBE09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F89A1943-10DC-4395-A255-380486FFBE09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F89A1943-10DC-4395-A255-380486FFBE09}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,14 +55,18 @@ Global
 		{3A5D216D-2F53-4584-85DA-FA8A4B156003}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A5D216D-2F53-4584-85DA-FA8A4B156003}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A5D216D-2F53-4584-85DA-FA8A4B156003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CC4F4A1E-4632-4779-A88A-8BF5A0FF4668} = {E2B3BFDB-FE6A-4E67-8A4E-D20B1FD97DE1}
-		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D} = {E2B3BFDB-FE6A-4E67-8A4E-D20B1FD97DE1}
 		{3A5D216D-2F53-4584-85DA-FA8A4B156003} = {E2B3BFDB-FE6A-4E67-8A4E-D20B1FD97DE1}
+		{B2CCA589-F26C-49BD-B2D5-5D82D7D6011D} = {E2B3BFDB-FE6A-4E67-8A4E-D20B1FD97DE1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D74968DC-0A88-45AA-966B-01F4FD4BB9EA}

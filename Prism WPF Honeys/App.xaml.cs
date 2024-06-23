@@ -10,7 +10,7 @@ using Prism_WPF_Honeys.ShellPrism.Mappings;
 using Prism_WPF_Honeys.Views;
 using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Modules.Notas;
-using PrismWPFHoneys.Modules.Contacts;
+using PrismWPFHoneys.Modules.Registro;
 using PrismWPFHoneys.Modules.Mail;
 using PrismWPFHoneys.ShellPrism.CustomRegion;
 using System.Windows;
@@ -72,7 +72,7 @@ namespace Prism_WPF_Honeys
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             moduleCatalog.AddModule<MailModule>();
-            moduleCatalog.AddModule<ContactsModule>();
+            moduleCatalog.AddModule<RegistroModule>();
             moduleCatalog.AddModule<NotasModule>();
             
         }

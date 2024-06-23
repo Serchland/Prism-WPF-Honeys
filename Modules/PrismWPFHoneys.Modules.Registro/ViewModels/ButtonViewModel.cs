@@ -6,7 +6,7 @@ using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Types;
 using System;
 
-namespace PrismWPFHoneys.Modules.Contacts.ViewModels
+namespace PrismWPFHoneys.Modules.Registro.ViewModels
 {
     public class ButtonViewModel : ButtonViewModelBase
     {
@@ -22,13 +22,13 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 
         private void Initialize()
         {
-            Caption = "Contacts Button";
-            ModuleName = AppModuleNames.ContactsModuleName;
+            Caption = "Registro Button";
+            ModuleName = AppModuleNames.RegistroModuleName;
         }
 
         private void ModuleInitialized(string moduleInitialized)
         {
-            if (moduleInitialized == AppModuleNames.ContactsModuleName)
+            if (moduleInitialized == AppModuleNames.RegistroModuleName)
             {
                 Visibility = System.Windows.Visibility.Visible;
             }

@@ -8,11 +8,11 @@
         public const string NotasNavigationContentRegion = "NotasNavigationContentRegion";
         public const string NotasRibbonContentRegion = "NotasRibbonContentRegion";
 
-        public const string ContactsButtonContentRegion = "ContactsButtonContentRegion";
-        public const string ContactsFooterContentRegion = "ContactsFooterContentRegion";
-        public const string ContactsListContentRegion = "ContactsListContentRegion";
-        public const string ContactsNavigationContentRegion = "ContactsNavigationContentRegion";
-        public const string ContactsRibbonContentRegion = "ContactsRibbonContentRegion";
+        public const string RegistroButtonContentRegion = "RegistroButtonContentRegion";
+        public const string RegistroFooterContentRegion = "RegistroFooterContentRegion";
+        public const string RegistroListContentRegion = "RegistroListContentRegion";
+        public const string RegistroNavigationContentRegion = "RegistroNavigationContentRegion";
+        public const string RegistroRibbonContentRegion = "RegistroRibbonContentRegion";
 
         public const string MailButtonContentRegion = "MailButtonContentRegion";
         public const string MailFooterContentRegion = "MailFooterContentRegion";

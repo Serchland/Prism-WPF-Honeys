@@ -58,13 +58,13 @@ namespace Prism_WPF_Honeys.ViewModels
 
                     break;
 
-                case AppModuleNames.ContactsModuleName:
-                    listNavigationParameters.Add("id", AppModuleNames.ContactsModuleName);
+                case AppModuleNames.RegistroModuleName:
+                    listNavigationParameters.Add("id", AppModuleNames.RegistroModuleName);
 
-                    _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.ContactsFooterContentRegion);
-                    _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.ContactsListContentRegion, listNavigationParameters);
-                    _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.ContactsNavigationContentRegion);
-                    //_regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.ContactsRibbonContentRegion);
+                    _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.RegistroFooterContentRegion);
+                    _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.RegistroListContentRegion, listNavigationParameters);
+                    _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.RegistroNavigationContentRegion);
+                    //_regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.RegistroRibbonContentRegion);
 
                     break;
 

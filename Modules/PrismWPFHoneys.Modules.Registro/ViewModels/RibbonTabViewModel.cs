@@ -1,6 +1,6 @@
 ﻿using Prism.Mvvm;
 
-namespace PrismWPFHoneys.Modules.Contacts.ViewModels
+namespace PrismWPFHoneys.Modules.Registro.ViewModels
 {
     public class RibbonTabViewModel : BindableBase
     {

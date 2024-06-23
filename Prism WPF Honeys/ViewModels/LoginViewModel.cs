@@ -32,11 +32,11 @@ namespace Prism_WPF_Honeys.ViewModels
         private void FakeLoginTask()
         {
             Thread tNotas = new Thread(new ThreadStart(ThreadNotas));
-            Thread tContacts = new Thread(new ThreadStart(ThreadContacts));
+            Thread tRegistro = new Thread(new ThreadStart(ThreadRegistro));
             Thread tMail = new Thread(new ThreadStart(ThreadMail));
 
             tNotas.Start();
-            tContacts.Start();
+            tRegistro.Start();
             tMail.Start();
         }
 
@@ -46,10 +46,10 @@ namespace Prism_WPF_Honeys.ViewModels
             _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.NotasModuleName);
         }
 
-        private void ThreadContacts()
+        private void ThreadRegistro()
         {
             Thread.Sleep(2000);
-            _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.ContactsModuleName);
+            _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.RegistroModuleName);
         }
 
         private void ThreadMail()

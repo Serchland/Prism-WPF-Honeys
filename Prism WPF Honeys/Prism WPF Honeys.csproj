@@ -137,10 +137,6 @@
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.Contacts\PrismWPFHoneys.Modules.Contacts.csproj">
-      <Project>{b2cca589-f26c-49bd-b2d5-5d82d7d6011d}</Project>
-      <Name>PrismWPFHoneys.Modules.Contacts</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.Mail\PrismWPFHoneys.Modules.Mail.csproj">
       <Project>{cc4f4a1e-4632-4779-a88a-8bf5a0ff4668}</Project>
       <Name>PrismWPFHoneys.Modules.Mail</Name>
@@ -148,6 +144,10 @@
     <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.Notas\PrismWPFHoneys.Modules.Notas.csproj">
       <Project>{3a5d216d-2f53-4584-85da-fa8a4b156003}</Project>
       <Name>PrismWPFHoneys.Modules.Notas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.Registro\PrismWPFHoneys.Modules.Registro.csproj">
+      <Project>{b2cca589-f26c-49bd-b2d5-5d82d7d6011d}</Project>
+      <Name>PrismWPFHoneys.Modules.Registro</Name>
     </ProjectReference>
     <ProjectReference Include="..\PrismWPFHoneys.Business\PrismWPFHoneys.Business.csproj">
       <Project>{BD351459-E390-4962-BCE0-50EAE6C28816}</Project>

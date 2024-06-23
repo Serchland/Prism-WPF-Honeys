@@ -1,12 +1,12 @@
 ﻿using Prism.Mvvm;
 
-namespace PrismWPFHoneys.Modules.Contacts.ViewModels
+namespace PrismWPFHoneys.Modules.Registro.ViewModels
 {
     public class FooterViewModel : BindableBase
     {
         public FooterViewModel()
         {
-            Caption = "Contacts footer";
+            Caption = "Registro footer";
         }
 
         public string Caption { get; set; }

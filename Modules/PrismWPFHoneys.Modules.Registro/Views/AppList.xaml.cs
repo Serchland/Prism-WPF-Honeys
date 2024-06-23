@@ -3,7 +3,7 @@ using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Prism;
 using System.Windows.Controls;
 
-namespace PrismWPFHoneys.Modules.Contacts.Views
+namespace PrismWPFHoneys.Modules.Registro.Views
 {
     /// <summary>
     /// Lógica de interacción para AppList.xaml

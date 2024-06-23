@@ -16,7 +16,7 @@ namespace PrismWPFHoneys.Core.Types.Types
             public const string Monthly = "Monthly";
             public const string Annual = "Annual";
         }
-        public class Contacts
+        public class Registro
         {
             public const string Default = "Default";
 

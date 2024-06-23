@@ -3,7 +3,7 @@ using Prism.Mvvm;
 using Prism.Regions;
 using PrismWPFHoneys.Core.Types.Types;
 
-namespace PrismWPFHoneys.Modules.Contacts.ViewModels
+namespace PrismWPFHoneys.Modules.Registro.ViewModels
 {
     public class ListViewModel : BindableBase, INavigationAware
     {
@@ -13,8 +13,8 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 
         public ListViewModel()
         {
-            Message = "List from contacts module";
-            TestProperty = "Contacts TestProperty";
+            Message = "List from Registro module";
+            TestProperty = "Registro TestProperty";
         }
 
         #region "Commands"
@@ -24,7 +24,7 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
 
         void ExecuteCommandName()
         {
-            System.Windows.MessageBox.Show("Command from Contacts");
+            System.Windows.MessageBox.Show("Command from Registro");
         }
         #endregion
 
@@ -42,10 +42,10 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
         {
             string param = navigationContext.Parameters.GetValue<string>("id");
 
-            if (param == AppModuleNames.ContactsModuleName)
+            if (param == AppModuleNames.RegistroModuleName)
                 param = _currentFolder;
 
-            Message = string.Format("{0} {1}", "List from contacts module", param);
+            Message = string.Format("{0} {1}", "List from Registro module", param);
             _currentFolder = param;
 
             RaisePropertyChanged("Message");

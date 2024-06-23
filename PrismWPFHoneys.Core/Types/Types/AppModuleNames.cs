@@ -3,7 +3,7 @@
     public class AppModuleNames
     {
         public const string NotasModuleName = "Notas";
-        public const string ContactsModuleName = "Contacts";
+        public const string RegistroModuleName = "Registro";
         public const string MailModuleName = "Mail";
     }
 }

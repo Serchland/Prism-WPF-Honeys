@@ -1,7 +1,7 @@
 ﻿using Fluent;
 using PrismWPFHoneys.Core.Types.Interfaces;
 
-namespace PrismWPFHoneys.Modules.Contacts.Views
+namespace PrismWPFHoneys.Modules.Registro.Views
 {
     /// <summary>
     /// Lógica de interacción para AppRibbonTab.xaml
