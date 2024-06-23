@@ -6,6 +6,15 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     
     <Grid>
-        <core:NavigationView ItemsSource="{Binding Items}"></core:NavigationView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Label Content="Perfil" HorizontalAlignment="Center" VerticalAlignment="Center" ></Label>
+        
+        <core:NavigationView Grid.Row="1"
+            ItemsSource="{Binding Items}"></core:NavigationView>
     </Grid>
 </UserControl>

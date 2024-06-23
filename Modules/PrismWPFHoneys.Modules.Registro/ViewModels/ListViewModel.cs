@@ -14,7 +14,7 @@ namespace PrismWPFHoneys.Modules.Registro.ViewModels
         public ListViewModel()
         {
             Message = "List from Registro module";
-            TestProperty = "Registro TestProperty";
+            TestProperty = "Registro Ribbon Button";
         }
 
         #region "Commands"

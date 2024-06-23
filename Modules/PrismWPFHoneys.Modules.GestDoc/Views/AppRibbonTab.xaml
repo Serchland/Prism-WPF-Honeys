@@ -7,9 +7,8 @@
                   Loaded="RibbonTabItem_Loaded">
 
     <fluent:RibbonGroupBox Header="Actions">
-        <fluent:Button Header="{StaticResource New}"
-                       Command="{Binding GestDocDetailCommand}"
-                       LargeIcon="{StaticResource AddNew_ico}"/>
+        <fluent:Button Header="{Binding NewGestDocCaption}"
+                       Command="{Binding GestDocDetailCommand}"/>
     </fluent:RibbonGroupBox>
 </fluent:RibbonTabItem>
     

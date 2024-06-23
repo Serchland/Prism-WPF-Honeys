@@ -21,7 +21,7 @@ namespace PrismWPFHoneys.Modules.GestDoc.ViewModels
 
         public ListViewModel(IGestDocService GestDocService, IMyDialogService dialogService)
         {
-            _newGestDocCaption = "New";
+            _newGestDocCaption = "GestDoc Ribbon button";
 
             _dialogService = dialogService;
             _GestDocService = GestDocService;

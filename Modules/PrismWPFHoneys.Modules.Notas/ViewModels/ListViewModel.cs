@@ -14,7 +14,7 @@ namespace PrismWPFHoneys.Modules.Notas.ViewModels
         public ListViewModel()
         {
             Message = "List from notas module";
-            TestProperty = "Notas TestProperty";
+            TestProperty = "Notas Ribbon Button";
         }
 
         #region "Commands"

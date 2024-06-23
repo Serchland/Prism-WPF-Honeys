@@ -13,14 +13,14 @@ namespace PrismWPFHoneys.Core.Views
             InitializeComponent();
         }
 
-        //private void TreeView_Loaded(object sender, RoutedEventArgs e)
-        //{
+        private void TreeView_Loaded(object sender, RoutedEventArgs e)
+        {
 
-        //    this.Loaded -= TreeView_Loaded;
-        //    var treeViewItem = ItemContainerGenerator.ContainerFromItem(this.Items[0]) as TreeViewItem;
-        //    treeViewItem.Focus();
-        //    treeViewItem.IsSelected = true;
-        //    treeViewItem.IsExpanded = true;
-        //}
+            this.Loaded -= TreeView_Loaded;
+            var treeViewItem = ItemContainerGenerator.ContainerFromItem(this.Items[0]) as TreeViewItem;
+            treeViewItem.Focus();
+            treeViewItem.IsSelected = true;
+            treeViewItem.IsExpanded = true;
+        }
     }
 }
