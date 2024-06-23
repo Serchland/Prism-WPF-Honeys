@@ -11,15 +11,15 @@ namespace Prism_WPF_Honeys.ShellPrism.Dialogs
     {
         //SERCH00: I am not sure if I am happy with this implementation
         private readonly IRegionManager _regionManager;
-        private readonly IMailService _mailService;
+        private readonly IGestDocService _GestDocService;
 
         private DetailWindow _window;
         private int _messageId;
 
-        public MyDialogService(IRegionManager regionManager, IMailService mailService)
+        public MyDialogService(IRegionManager regionManager, IGestDocService GestDocService)
         {
             _regionManager = regionManager;
-            _mailService = mailService;
+            _GestDocService = GestDocService;
         }
 
         public void Show(string name, int messageId)
@@ -41,13 +41,13 @@ namespace Prism_WPF_Honeys.ShellPrism.Dialogs
             _window.Loaded += OnWindow_Loaded;
             _window.Show();
 
-            var detailMessage = _mailService.GetDetailMessage(messageId);
+            var detailMessage = _GestDocService.GetDetailMessage(messageId);
         }
 
         private void OnWindow_Loaded(object sender, RoutedEventArgs e)
         {
             _window.Loaded -= OnWindow_Loaded;
-            _window.DataContext = _mailService.GetDetailMessage(_messageId);
+            _window.DataContext = _GestDocService.GetDetailMessage(_messageId);
         }
     }
 }

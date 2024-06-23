@@ -4,6 +4,6 @@
     {
         public const string NotasModuleName = "Notas";
         public const string RegistroModuleName = "Registro";
-        public const string MailModuleName = "Mail";
+        public const string GestDocModuleName = "GestDoc";
     }
 }

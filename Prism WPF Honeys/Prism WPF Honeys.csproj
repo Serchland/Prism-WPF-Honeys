@@ -137,9 +137,9 @@
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.Mail\PrismWPFHoneys.Modules.Mail.csproj">
+    <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.GestDoc\PrismWPFHoneys.Modules.GestDoc.csproj">
       <Project>{cc4f4a1e-4632-4779-a88a-8bf5a0ff4668}</Project>
-      <Name>PrismWPFHoneys.Modules.Mail</Name>
+      <Name>PrismWPFHoneys.Modules.GestDoc</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modules\PrismWPFHoneys.Modules.Notas\PrismWPFHoneys.Modules.Notas.csproj">
       <Project>{3a5d216d-2f53-4584-85da-fa8a4b156003}</Project>

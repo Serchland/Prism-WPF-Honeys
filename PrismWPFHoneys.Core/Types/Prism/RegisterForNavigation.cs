@@ -14,10 +14,10 @@
         public const string RegistroNavigationContentRegion = "RegistroNavigationContentRegion";
         public const string RegistroRibbonContentRegion = "RegistroRibbonContentRegion";
 
-        public const string MailButtonContentRegion = "MailButtonContentRegion";
-        public const string MailFooterContentRegion = "MailFooterContentRegion";
-        public const string MailListContentRegion = "MailListContentRegion";
-        public const string MailNavigationContentRegion = "MailNavigationContentRegion";
-        public const string MailRibbonContentRegion = "MailRibbonContentRegion";
+        public const string GestDocButtonContentRegion = "GestDocButtonContentRegion";
+        public const string GestDocFooterContentRegion = "GestDocFooterContentRegion";
+        public const string GestDocListContentRegion = "GestDocListContentRegion";
+        public const string GestDocNavigationContentRegion = "GestDocNavigationContentRegion";
+        public const string GestDocRibbonContentRegion = "GestDocRibbonContentRegion";
     }
 }

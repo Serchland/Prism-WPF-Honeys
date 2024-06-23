@@ -2,6 +2,7 @@
 using PrismWPFHoneys.Core.Types.Base;
 using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Core.Types.Prism;
+using PrismWPFHoneys.Core.Types.Types;
 using System.Collections.ObjectModel;
 
 namespace PrismWPFHoneys.Modules.Notas.ViewModels
@@ -23,9 +24,9 @@ namespace PrismWPFHoneys.Modules.Notas.ViewModels
             root.Caption = "Root Notas";
             root.NavigationPath = GetNavigationPath("Default");
 
-            root.Items.Add(new NavigationItem() { Caption = "item 1", NavigationPath = GetNavigationPath("item 1") });
-            root.Items.Add(new NavigationItem() { Caption = "item 2", NavigationPath = GetNavigationPath("item 2") });
-            root.Items.Add(new NavigationItem() { Caption = "item 3", NavigationPath = GetNavigationPath("item 3") });
+            root.Items.Add(new NavigationItem() { Caption = Folders.Notas.Item1, NavigationPath = GetNavigationPath(Folders.Notas.Item1) });
+            root.Items.Add(new NavigationItem() { Caption = Folders.Notas.Item2, NavigationPath = GetNavigationPath(Folders.Notas.Item2) });
+            root.Items.Add(new NavigationItem() { Caption = Folders.Notas.Item3, NavigationPath = GetNavigationPath(Folders.Notas.Item3) });
 
             Items.Add(root);
         }

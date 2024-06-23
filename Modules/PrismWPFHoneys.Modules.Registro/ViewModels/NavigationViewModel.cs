@@ -24,9 +24,9 @@ namespace PrismWPFHoneys.Modules.Registro.ViewModels
             root.Caption = "Root Registro";
             root.NavigationPath = GetNavigationPath("Default");
 
-            root.Items.Add(new NavigationItem() { Caption = "Item 1", NavigationPath = GetNavigationPath("Item 1") });
-            root.Items.Add(new NavigationItem() { Caption = "Item 2", NavigationPath = GetNavigationPath("Item 2") });
-            root.Items.Add(new NavigationItem() { Caption = "Item 3", NavigationPath = GetNavigationPath("Item 3") });
+            root.Items.Add(new NavigationItem() { Caption = Folders.Registro.Item1, NavigationPath = GetNavigationPath(Folders.Registro.Item1) });
+            root.Items.Add(new NavigationItem() { Caption = Folders.Registro.Item2, NavigationPath = GetNavigationPath(Folders.Registro.Item2) });
+            root.Items.Add(new NavigationItem() { Caption = Folders.Registro.Item3, NavigationPath = GetNavigationPath(Folders.Registro.Item3) });
 
             Items.Add(root);
         }

@@ -11,7 +11,7 @@ using Prism_WPF_Honeys.Views;
 using PrismWPFHoneys.Core.Types.Interfaces;
 using PrismWPFHoneys.Modules.Notas;
 using PrismWPFHoneys.Modules.Registro;
-using PrismWPFHoneys.Modules.Mail;
+using PrismWPFHoneys.Modules.GestDoc;
 using PrismWPFHoneys.ShellPrism.CustomRegion;
 using System.Windows;
 using System.Windows.Controls;
@@ -71,7 +71,7 @@ namespace Prism_WPF_Honeys
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule<MailModule>();
+            moduleCatalog.AddModule<GestDocModule>();
             moduleCatalog.AddModule<RegistroModule>();
             moduleCatalog.AddModule<NotasModule>();
             

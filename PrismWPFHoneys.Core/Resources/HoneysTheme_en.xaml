@@ -7,7 +7,7 @@
     <system:String x:Key="New">New</system:String>
 
     <!--RibbonGroupBox-->
-    <system:String x:Key="Mail">Mail</system:String>
+    <system:String x:Key="GestDoc">GestDoc</system:String>
     
     <!--Icons-->
     <!--RibbonButtons-->

@@ -1,0 +1,15 @@
+﻿<fluent:RibbonTabItem x:Class="PrismWPFHoneys.Modules.GestDoc.Views.AppRibbonTab"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:fluent="urn:fluent-ribbon"    
+                  Header="{StaticResource GestDoc}"
+                  IsSelected="True"
+                  Loaded="RibbonTabItem_Loaded">
+
+    <fluent:RibbonGroupBox Header="Actions">
+        <fluent:Button Header="{StaticResource New}"
+                       Command="{Binding GestDocDetailCommand}"
+                       LargeIcon="{StaticResource AddNew_ico}"/>
+    </fluent:RibbonGroupBox>
+</fluent:RibbonTabItem>
+    

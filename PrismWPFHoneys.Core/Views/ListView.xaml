@@ -10,7 +10,7 @@
             <DataGrid.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Click Me"
-                              Command="{Binding MailDetailCommand}"/>
+                              Command="{Binding GestDocDetailCommand}"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
             

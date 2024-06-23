@@ -1,0 +1,11 @@
+﻿<fluent:RibbonTabItem x:Class="PrismWPFHoneys.Modules.GestDoc.Views.Dialogs.GestDocDetail"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:fluent="urn:fluent-ribbon"
+                      Header="Actions"
+                      x:Name="GestDocDetailTab">
+
+    <fluent:RibbonGroupBox Header="Actions">
+        <fluent:Button Header="Dummy text" Command="{Binding MapTestCommand}"/>
+    </fluent:RibbonGroupBox>
+</fluent:RibbonTabItem>

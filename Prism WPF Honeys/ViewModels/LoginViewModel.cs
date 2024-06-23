@@ -33,11 +33,11 @@ namespace Prism_WPF_Honeys.ViewModels
         {
             Thread tNotas = new Thread(new ThreadStart(ThreadNotas));
             Thread tRegistro = new Thread(new ThreadStart(ThreadRegistro));
-            Thread tMail = new Thread(new ThreadStart(ThreadMail));
+            Thread tGestDoc = new Thread(new ThreadStart(ThreadGestDoc));
 
             tNotas.Start();
             tRegistro.Start();
-            tMail.Start();
+            tGestDoc.Start();
         }
 
         private void ThreadNotas()
@@ -52,10 +52,10 @@ namespace Prism_WPF_Honeys.ViewModels
             _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.RegistroModuleName);
         }
 
-        private void ThreadMail()
+        private void ThreadGestDoc()
         {
             Thread.Sleep(0);
-            _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.MailModuleName);
+            _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.GestDocModuleName);
         }
     }
 }

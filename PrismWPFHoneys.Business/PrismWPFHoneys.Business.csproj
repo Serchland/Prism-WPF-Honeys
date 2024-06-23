@@ -79,7 +79,7 @@
     <Compile Include="BusinessBase.cs" />
     <Compile Include="fakeObjects\svcFake1\FakeResponse1.cs" />
     <Compile Include="fakeObjects\svcFake2\FakeResponse2.cs" />
-    <Compile Include="MailMessage.cs" />
+    <Compile Include="GestDocMessage.cs" />
     <Compile Include="NavigationItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -68,13 +68,13 @@ namespace Prism_WPF_Honeys.ViewModels
 
                     break;
 
-                case AppModuleNames.MailModuleName:
-                    listNavigationParameters.Add("id", AppModuleNames.MailModuleName);
+                case AppModuleNames.GestDocModuleName:
+                    listNavigationParameters.Add("id", AppModuleNames.GestDocModuleName);
 
-                    _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.MailFooterContentRegion);
-                    _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.MailListContentRegion, listNavigationParameters);
-                    _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.MailNavigationContentRegion);
-                    //_regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.MailRibbonContentRegion);
+                    _regionManager.RequestNavigate(RegionNames.FooterContentRegion, RegisterForNavigation.GestDocFooterContentRegion);
+                    _regionManager.RequestNavigate(RegionNames.ListContentRegion, RegisterForNavigation.GestDocListContentRegion, listNavigationParameters);
+                    _regionManager.RequestNavigate(RegionNames.NavigationContentRegion, RegisterForNavigation.GestDocNavigationContentRegion);
+                    //_regionManager.RequestNavigate(RegionNames.RibbonContentRegion, RegisterForNavigation.GestDocRibbonContentRegion);
 
                     break;
             }

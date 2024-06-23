@@ -8,30 +8,30 @@ namespace PrismWPFHoneys.Core.Types.Types
 {
     public class Folders
     {
-        public class Calender
+        public class Notas
         {
             public const string Default = "Default";
 
-            public const string Weekly = "Weekly";
-            public const string Monthly = "Monthly";
-            public const string Annual = "Annual";
+            public const string Item1 = "Item 1";
+            public const string Item2 = "Item 2";
+            public const string Item3 = "Item 3";
         }
         public class Registro
         {
             public const string Default = "Default";
 
-            public const string Active = "Active";
-            public const string Inactive = "Inactive";
-            public const string Deleted = "Deleted";
+            public const string Item1 = "Item 1";
+            public const string Item2 = "Item 2";
+            public const string Item3 = "Item 3";
         }
 
-        public class Mail
+        public class GestDoc
         {
             public const string Default = "Default";
 
-            public const string Inbox = "Inbox";
-            public const string Outbox = "Outbox";
-            public const string Draft = "Draft";
+            public const string Item1 = "Item 1";
+            public const string Item2 = "Item 2";
+            public const string Item3 = "Item 3";
         }
     }
 }
