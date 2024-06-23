@@ -30,7 +30,7 @@ namespace PrismWPFHoneys.Modules.Registro.ViewModels
         {
             if (moduleInitialized == AppModuleNames.RegistroModuleName)
             {
-                Visibility = System.Windows.Visibility.Visible;
+                Enabled = true;
             }
         }
     }

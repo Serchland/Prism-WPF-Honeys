@@ -28,7 +28,7 @@ namespace PrismWPFHoneys.Modules.Notas.ViewModels
         {
             if (moduleInitialized == AppModuleNames.NotasModuleName)
             {
-                Visibility = System.Windows.Visibility.Visible;
+                Enabled = true;
             }
         }
     }

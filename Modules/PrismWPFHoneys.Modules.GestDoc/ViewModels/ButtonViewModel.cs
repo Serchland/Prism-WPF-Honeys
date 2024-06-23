@@ -29,7 +29,7 @@ namespace PrismWPFHoneys.Modules.GestDoc.ViewModels
         {
             if (moduleInitialized == AppModuleNames.GestDocModuleName)
             {
-                Visibility = System.Windows.Visibility.Visible;
+                Enabled = true;
             }
         }
     }

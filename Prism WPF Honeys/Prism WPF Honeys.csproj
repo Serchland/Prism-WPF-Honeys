@@ -81,6 +81,7 @@
     <Compile Include="ShellPrism\CustomRegions\RibbonRegionAdapter.cs" />
     <Compile Include="ShellPrism\CustomRegions\StackPanelRegionAdapter.cs" />
     <Compile Include="ShellPrism\Mappings\MappingProfile.cs" />
+    <Compile Include="Types\Managers\ModuleInitializer.cs" />
     <Compile Include="Views\Base\ButtonView.xaml.cs">
       <DependentUpon>ButtonView.xaml</DependentUpon>
     </Compile>

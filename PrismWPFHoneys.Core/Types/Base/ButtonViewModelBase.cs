@@ -10,7 +10,8 @@ namespace PrismWPFHoneys.Core.Types.Base
         IApplicationCommands _applicationCommands;
         public ButtonViewModelBase(IApplicationCommands applicationCommands)
         {
-            _visibility = Visibility.Collapsed;
+            _enabled = false; 
+            _visibility = Visibility.Visible;
             _applicationCommands = applicationCommands;
         }
 
@@ -20,7 +21,14 @@ namespace PrismWPFHoneys.Core.Types.Base
             get { return _visibility; }
             set { SetProperty(ref _visibility, value); }
         }
-        
+
+        private bool _enabled;
+        public bool Enabled
+        {
+            get { return _enabled; }
+            set { SetProperty(ref _enabled, value); }
+        }
+
         public string ModuleName { get; set; }
 
         private DelegateCommand<string> _selectedApplicationCommand;
