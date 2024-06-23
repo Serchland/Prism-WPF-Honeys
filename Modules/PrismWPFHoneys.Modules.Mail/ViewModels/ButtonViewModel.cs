@@ -28,7 +28,9 @@ namespace PrismWPFHoneys.Modules.Mail.ViewModels
         private void ModuleInitialized(string moduleInitialized)
         {
             if (moduleInitialized == AppModuleNames.MailModuleName)
+            {
                 Visibility = System.Windows.Visibility.Visible;
+            }
         }
     }
 }

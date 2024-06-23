@@ -19,6 +19,9 @@ namespace PrismWPFHoneys.Modules.Calendar
         public void OnInitialized(IContainerProvider containerProvider)
         {
             _regionManager.RegisterViewWithRegion(RegionNames.ButtonContentRegion, typeof(AppButton));
+            _regionManager.RegisterViewWithRegion(RegionNames.FooterContentRegion, typeof(AppFooter));
+            _regionManager.RegisterViewWithRegion(RegionNames.ListContentRegion, typeof(AppList));
+            _regionManager.RegisterViewWithRegion(RegionNames.NavigationContentRegion, typeof(AppNavigation));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

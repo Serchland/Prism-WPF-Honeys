@@ -24,7 +24,7 @@ namespace PrismWPFHoneys.Modules.Calendar.ViewModels
 
         void ExecuteCommandName()
         {
-            System.Windows.MessageBox.Show("Command from Contacts");
+            System.Windows.MessageBox.Show("Command from Calendar");
         }
         #endregion
 

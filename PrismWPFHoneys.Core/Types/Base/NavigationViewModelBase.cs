@@ -12,7 +12,7 @@ namespace PrismWPFHoneys.Core.Types.Base
         public NavigationViewModelBase(IApplicationCommands applicationCommands)
         {
             _applicationCommands = applicationCommands;
-            _applicationCommands.NavigationNavigateCommand.Execute(GetNavigationPath("Default"));
+            //_applicationCommands.NavigationNavigateCommand.Execute(GetNavigationPath("Default"));
         }
 
         protected abstract string GetNavigationPath(string item);

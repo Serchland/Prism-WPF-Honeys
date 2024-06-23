@@ -6,7 +6,7 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
     {
         public FooterViewModel()
         {
-            Caption = "Footer footer";
+            Caption = "Contacts footer";
         }
 
         public string Caption { get; set; }

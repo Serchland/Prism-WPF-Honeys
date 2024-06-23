@@ -42,18 +42,19 @@ namespace Prism_WPF_Honeys.ViewModels
 
         private void ThreadCalendar()
         {
-            //Thread.Sleep(3000);
+            Thread.Sleep(3000);
             _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.CalendarModuleName);
         }
 
         private void ThreadContacts()
         {
-            //Thread.Sleep(6000);
+            Thread.Sleep(2000);
             _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.ContactsModuleName);
         }
 
         private void ThreadMail()
         {
+            Thread.Sleep(0);
             _ea.GetEvent<OnModuleInitializedEvent>().Publish(AppModuleNames.MailModuleName);
         }
     }

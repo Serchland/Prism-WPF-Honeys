@@ -25,7 +25,7 @@ namespace PrismWPFHoneys.Modules.Mail
         {
             _regionManager.RegisterViewWithRegion(RegionNames.ButtonContentRegion, typeof(AppButton));
             _regionManager.RegisterViewWithRegion(RegionNames.FooterContentRegion, typeof(AppFooter));
-            //_regionManager.RegisterViewWithRegion(RegionNames.ListContentRegion, typeof(AppList));
+            _regionManager.RegisterViewWithRegion(RegionNames.ListContentRegion, typeof(AppList));
             _regionManager.RegisterViewWithRegion(RegionNames.NavigationContentRegion, typeof(AppNavigation));
         }
 
@@ -35,13 +35,13 @@ namespace PrismWPFHoneys.Modules.Mail
             ViewModelLocationProvider.Register<AppFooter, FooterViewModel>();
             ViewModelLocationProvider.Register<AppList, ListViewModel>();
             ViewModelLocationProvider.Register<AppNavigation, NavigationViewModel>();
-            //ViewModelLocationProvider.Register<AppRibbonTab, RibbonTabViewModel>();
+            ViewModelLocationProvider.Register<AppRibbonTab, RibbonTabViewModel>();
 
             containerRegistry.RegisterForNavigation<AppButton, ButtonViewModel>(RegisterForNavigation.MailButtonContentRegion);
             containerRegistry.RegisterForNavigation<AppFooter, FooterViewModel>(RegisterForNavigation.MailFooterContentRegion);
             containerRegistry.RegisterForNavigation<AppList, ListViewModel>(RegisterForNavigation.MailListContentRegion);
             containerRegistry.RegisterForNavigation<AppNavigation, NavigationViewModel>(RegisterForNavigation.MailNavigationContentRegion);
-            //containerRegistry.RegisterForNavigation<AppRibbonTab, RibbonTabViewModel>(RegisterForNavigation.MailRibbonContentRegion);
+            containerRegistry.RegisterForNavigation<AppRibbonTab, RibbonTabViewModel>(RegisterForNavigation.MailRibbonContentRegion);
             containerRegistry.RegisterForNavigation<MailDetail, MailDetailViewModel>("MailDetail");
 
             containerRegistry.RegisterSingleton<IMailService, MailServices>();

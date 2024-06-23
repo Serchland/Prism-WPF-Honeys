@@ -43,9 +43,9 @@ namespace Prism_WPF_Honeys
             else
                 Application.Current.Shutdown();
 
-            ////TODO: Apply styles.
-            // Set the application theme to Dark.Green
-            //ThemeManager.Current.ChangeTheme(this, "Dark.Green");
+            ////TODO: Aplicar estilos.
+            ///Dark.Green
+            ///ThemeManager.Current.ChangeTheme(this, "Dark.Green");
 
             base.OnInitialized();
         }
@@ -71,9 +71,10 @@ namespace Prism_WPF_Honeys
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule<CalendarModule>();
-            moduleCatalog.AddModule<ContactsModule>();
             moduleCatalog.AddModule<MailModule>();
+            moduleCatalog.AddModule<ContactsModule>();
+            moduleCatalog.AddModule<CalendarModule>();
+            
         }
 
         protected override void ConfigureRegionAdapterMappings(RegionAdapterMappings regionAdapterMappings)

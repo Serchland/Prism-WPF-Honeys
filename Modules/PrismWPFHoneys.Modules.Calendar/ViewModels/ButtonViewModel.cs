@@ -27,7 +27,9 @@ namespace PrismWPFHoneys.Modules.Calendar.ViewModels
         private void ModuleInitialized(string moduleInitialized)
         {
             if (moduleInitialized == AppModuleNames.CalendarModuleName)
+            {
                 Visibility = System.Windows.Visibility.Visible;
+            }
         }
     }
 }

@@ -29,7 +29,9 @@ namespace PrismWPFHoneys.Modules.Contacts.ViewModels
         private void ModuleInitialized(string moduleInitialized)
         {
             if (moduleInitialized == AppModuleNames.ContactsModuleName)
+            {
                 Visibility = System.Windows.Visibility.Visible;
+            }
         }
     }
 }
