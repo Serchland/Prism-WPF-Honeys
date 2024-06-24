@@ -16,14 +16,12 @@
         
         <StackPanel Grid.Column="0" Grid.Row="0">
             <Label Content="Perfil" Background="LightGray" HorizontalContentAlignment="Center"/>
-            <Border>
-                <TextBlock Text="Perfil de usuario" Background="White" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock.InputBindings>
-                        <MouseBinding Command="{Binding NavigationNavigateCommand}" MouseAction="LeftClick" 
-                                      CommandParameter="GestDocListContentRegion?id=UserProfile"/>
-                    </TextBlock.InputBindings>
-                </TextBlock>
-            </Border>
+            <TreeViewItem Header="Perfil de usuario" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TreeViewItem.InputBindings>
+                    <MouseBinding Command="{Binding NavigationNavigateCommand}" MouseAction="LeftClick" 
+                                  CommandParameter="UserProfile"/>
+                </TreeViewItem.InputBindings>
+            </TreeViewItem>
             
             <Label Content="Aplicaciones" Background="LightGray" HorizontalContentAlignment="Center"></Label>
         </StackPanel>

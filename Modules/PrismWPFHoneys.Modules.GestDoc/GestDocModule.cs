@@ -35,14 +35,17 @@ namespace PrismWPFHoneys.Modules.GestDoc
             ViewModelLocationProvider.Register<AppFooter, FooterViewModel>();
             ViewModelLocationProvider.Register<AppList, ListViewModel>();
             ViewModelLocationProvider.Register<AppNavigation, NavigationViewModel>();
-            ViewModelLocationProvider.Register<AppRibbonTab, RibbonTabViewModel>();
+            ViewModelLocationProvider.Register<UserProfile, UserProfileViewModel>();
+            //ViewModelLocationProvider.Register<AppRibbonTab, RibbonTabViewModel>();
 
             containerRegistry.RegisterForNavigation<AppButton, ButtonViewModel>(RegisterForNavigation.GestDocButtonContentRegion);
             containerRegistry.RegisterForNavigation<AppFooter, FooterViewModel>(RegisterForNavigation.GestDocFooterContentRegion);
             containerRegistry.RegisterForNavigation<AppList, ListViewModel>(RegisterForNavigation.GestDocListContentRegion);
             containerRegistry.RegisterForNavigation<AppNavigation, NavigationViewModel>(RegisterForNavigation.GestDocNavigationContentRegion);
-            containerRegistry.RegisterForNavigation<AppRibbonTab, RibbonTabViewModel>(RegisterForNavigation.GestDocRibbonContentRegion);
+            //containerRegistry.RegisterForNavigation<AppRibbonTab, RibbonTabViewModel>(RegisterForNavigation.GestDocRibbonContentRegion);
             containerRegistry.RegisterForNavigation<GestDocDetail, GestDocDetailViewModel>("GestDocDetail");
+
+            containerRegistry.RegisterForNavigation<UserProfile, UserProfileViewModel>("UserProfile");
 
             containerRegistry.RegisterSingleton<IGestDocService, GestDocServices>();
             containerRegistry.RegisterSingleton<ISecurityService, SecurityService>();
