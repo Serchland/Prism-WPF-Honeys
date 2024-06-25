@@ -1,27 +1,62 @@
-﻿using PrismWPFHoneys.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PrismWPFHoneys.Business.fakeObjects.Responses.Security.WsClientSecurityResponse;
+using PrismWPFHoneys.Services.Interfaces;
+using PrismWPFHoneys.Services.Responses.Security.WsTokenResponse;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace PrismWPFHoneys.Services
 {
     public class SecurityService : ISecurityService
     {
-        public void GetAuthToken()
+        private string _connectionString;
+        public SecurityService()
         {
-            //throw new NotImplementedException();
+            _connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+
+        }
+        public WsTokenResponse GetAuthToken()
+        {
+            string query = "SELECT * FROM TableName WHERE ColumnName = @Param";
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+            new SqlParameter("@Param", SqlDbType.VarChar) { Value = "ValueToSearch" }
+            };
+
+            DataTable result = ExecuteQuery(query, parameters);
+
+            return new WsTokenResponse();
+            ////Procesar resultados
         }
 
-        public void GetTokenFromAccessKey()
+        public WsTokenResponse GetTokenFromAccessKey()
         {
-            //throw new NotImplementedException();
+            return new WsTokenResponse();
         }
 
-        public void GetUserPerms()
+        public WsClientSecurityResponse GetUserPerms()
         {
-            //throw new NotImplementedException();
+            return new WsClientSecurityResponse();
+        }
+
+        private DataTable ExecuteQuery(string query, SqlParameter[] parameters = null)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                return dataTable;
+            }
         }
     }
 }

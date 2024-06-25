@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PrismWPFHoneys.Business.fakeObjects.Responses.Security.WsClientSecurityResponse;
+using PrismWPFHoneys.Services.Responses.Security.WsTokenResponse;
 
 namespace PrismWPFHoneys.Services.Interfaces
 {
     public interface ISecurityService
     {
-        void GetAuthToken();
-        void GetTokenFromAccessKey();
-        void GetUserPerms();
+        WsTokenResponse GetAuthToken();
+        WsTokenResponse GetTokenFromAccessKey();
+        WsClientSecurityResponse GetUserPerms();
     }
 }

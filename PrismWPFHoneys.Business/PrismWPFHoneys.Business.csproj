@@ -77,6 +77,77 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessBase.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\AppPerm.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\ArchivePerms.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\BaseSecurityResponse.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\DividerType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\DocumentType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\EditFlag.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\EstadoElaboracion.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\FieldDataType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\FieldDbType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\FieldKey.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\FieldPersonFisKey.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\FieldPersonJurKey.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\FieldPersonType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\IdocSystemProfile.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\IdocUserStat.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\LinkSgdaType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\LinkSicresType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\OtherDocumentType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\Perfil.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\RegisterType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\RegistroEntrada.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\RegistroSalida.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\RequireStampMetadata.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\ServiceType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\SgdaOprtnType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\StateSignature.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\StateTransact.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\SystemProfile.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\TipoDocumental.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\TipoFirmaType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\Enums\UnitsAccessProfile.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\GestDocMessage.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\OperationFields.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\PermisoModificacion.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\PermisoRegistrar.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\TipoEstadoElaboracion.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\TipoMetadatos.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsAdminSecurityResponse.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsArchiveDefinition.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsArchiveField.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsCiudadanosCode.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsClientSecurityResponse.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsConditionalBehaviourField.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsControlDocumentFields.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsDivider.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsDocSgdaMetadata.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsDocument.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsEditAction.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsFieldBase.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsFolderField.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsFolderTree.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsFolderType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsGestDocSecurityResponse.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsIndizacionSecurityResponse.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsMetadatosEniSignature.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsPersonDefinition.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsPersonField.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsPersonFisDefinition.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsPersonIpType.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsPersonJurDefinition.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsRelatedUnit.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsRelatedUnits.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsRepositoryData.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsSartidoFields.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsSgdaFields.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsSgdaMetadata.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsSicresFields.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsStorageFields.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsUser.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsClientSecurityResponse\WsVolumeData.cs" />
+    <Compile Include="fakeObjects\Responses\Security\WsTokenResponse\WsTokenResponse.cs" />
     <Compile Include="fakeObjects\svcFake1\FakeResponse1.cs" />
     <Compile Include="fakeObjects\svcFake2\FakeResponse2.cs" />
     <Compile Include="GestDocMessage.cs" />
@@ -85,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="fakeObjects\Responses\GestDoc\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

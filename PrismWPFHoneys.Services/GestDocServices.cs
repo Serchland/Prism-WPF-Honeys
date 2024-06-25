@@ -4,11 +4,13 @@ using PrismWPFHoneys.Business.fakeObjects.svcFake2;
 using PrismWPFHoneys.Services.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace PrismWPFHoneys.Services
 {
     public class GestDocServices : IGestDocService
     {
+        private string _connectionString;
         public GestDocServices()
         {
             Initialize();
